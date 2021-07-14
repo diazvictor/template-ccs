@@ -3,7 +3,7 @@
 // @version   1.0
 // @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
 // @date      09.06.2021 19:45:20 -04
-// 
+
 // Para compilar el archivo desde la consola:
 // lessc columns.less > columns.css
 
@@ -33,11 +33,20 @@
 	});
 }
 
+.container {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1200px;
+}
+
 .columns {
 	display: grid;
 	grid-gap: @gap;
-	margin-bottom: @gap;
-	grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+
+	&:not(:last-child) {
+		margin-bottom: @gap;
+	}
 
 	each(range(@columns), {
 		&.columns-@{index} {
