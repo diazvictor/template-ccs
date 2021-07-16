@@ -14,6 +14,7 @@
 	grid-template-areas: "sidebar header"
 						 "sidebar content"
 						 "sidebar footer";
+	min-height: 900px;
 
 	.header {
 		grid-area: header
@@ -30,15 +31,17 @@
 			padding: 40px 0 40px 0;
 
 			img {
-				width: 90px;
-				height: 90px;
+				width: 70px;
+				height: $width;
 				margin: 0 auto;
 			}
 
 			.title {
 				color: @white;
+				font-size: 18px;
 				text-align: center;
-				text-transform: uppercase;
+				text-transform: capitalize;
+				font-weight: bold;
 				margin-top: 10px;
 			}
 		}
@@ -66,9 +69,19 @@
 					&:hover {
 						background-color: rgba(255, 255, 255, .1);
 					}
+				}
 
-					i:last-child {
-						transform: rotate(90deg);
+				&.is-collapsible {
+					.sidenav-collapse-item {
+						&-header {
+							i:last-child {
+								transform: rotate(90deg);
+							}
+						}
+
+						&-body {
+							display: block;
+						}
 					}
 				}
 
@@ -76,20 +89,13 @@
 					.sidenav-collapse-item {
 						&-header {
 							background-color: rgba(255, 255, 255, .1);
-
-							i:last-child {
-								transform: rotate(90deg);
-							}
-						}
-
-						&-body {
-							// display: block;
 						}
 					}
 				}
 
+
 				&-body {
-					// display: none;
+					display: none;
 
 					.sidenav-item {
 						padding: 10px 70px;

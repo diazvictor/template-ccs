@@ -59,6 +59,12 @@
 			grid-column: span @value;
 		}
 	});
+
+	.row {
+		&.has-centered {
+			justify-self: center
+		}
+	}
 }
 
 @media screen and (max-width: @breakpoints[xlarge]) {

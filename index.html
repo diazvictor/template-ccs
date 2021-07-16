@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/assets/css/ccs.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/chartist.min.css">
 </head>
 <body>
     <div class="wrapper">
@@ -21,11 +22,11 @@
 					<div class="buttons">
 						<a href="javascript:0;" class="button is-icon">
 							<i class="far fa-bell"></i>
-							<span class="label">4</span>
+							<span class="label is-floating">4</span>
 						</a>
 						<a href="javascript:0;" class="button is-icon">
 							<i class="far fa-comment-alt"></i>
-							<span class="label">6</span>
+							<span class="label is-floating">6</span>
 						</a>
 					</div>
 				</div>
@@ -33,303 +34,232 @@
 		</header>
 
 		<aside class="sidebar">
+			<div class="sidebar-brand">
+				<img src="/assets/images/logo-white.svg">
+
+				<span class="title">
+					customer
+					<br>
+					support
+				</span>
+			</div>
+
 			<nav class="sidenav">
-				<div class="sidenav-brand">
-					<img src="/assets/images/logo-white.svg">
-					<span class="title">
-						customer
-						<br>
-						support
-					</span>
+				<div class="heading">Dashboard</div>
+				<a href="/" class="sidenav-item is-active">
+					<i class="sidenav-item-icon fas fa-home"></i>
+					<div class="sidenav-item-content">Dashboard</div>
+				</a>
+
+				<a href="/facturas/" class="sidenav-item">
+					<i class="sidenav-item-icon fas fa-file-alt"></i>
+					<div class="sidenav-item-content">Facturas</div>
+					<span class="label">22</span>
+				</a>
+
+				<div class="sidenav-collapse-item">
+					<div class="sidenav-collapse-item-header">
+						<i class="sidenav-item-icon fas fa-money-check"></i>
+						<div class="sidenav-item-content">Pagos</div>
+						<i class="fas fa-chevron-right"></i>
+					</div>
+
+					<div class="sidenav-collapse-item-body">
+						<a href="/pagos/mis-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Mis pagos</div>
+						</a>
+
+						<a href="/pagos/reportar-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Reportar pagos</div>
+						</a>
+					</div>
 				</div>
-				<div class="sidenav-menu">
-					<div class="heading">Dashboard</div>
 
-					<a href="javascript:0;" class="sidenav-item is-icon">
-						<i class="fas fa-home"></i>
-						Dashboard
-					</a>
-					<a href="javascript:0;" class="sidenav-item is-icon">
-						<i class="fas fa-file-alt"></i>
-						Facturas
-					</a>
-					<a href="javascript:0;" class="sidenav-item is-icon">
-						<i class="fas fa-money-check"></i>
-						Pagos
-					</a>
-					<a href="javascript:0;" class="sidenav-item is-icon">
-						<i class="fas fa-cog"></i>
-						Servicios
-					</a>
+				<div class="sidenav-collapse-item">
+					<div class="sidenav-collapse-item-header">
+						<i class="sidenav-item-icon fas fa-cog"></i>
+						<div class="sidenav-item-content">Servicios</div>
+						<i class="fas fa-chevron-right"></i>
+					</div>
 
-					<div class="heading">Soporte y Ayuda</div>
+					<div class="sidenav-collapse-item-body">
+						<a href="/servicios/" class="sidenav-item is-active">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Solicitar Nuevo</div>
+						</a>
 
-					<a href="javascript:0;" class="sidenav-item is-icon">
-						<i class="fas fa-exclamation-circle"></i>
-						Reportes
-					</a>
-					<a href="javascript:0;" class="sidenav-item is-icon">
-						<i class="fas fa-wrench"></i>
-						Asistencia Técnica
-					</a>
+						<a href="/pagos/reportar-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Plan 20Mb-r</div>
+						</a>
+
+						<a href="/pagos/reportar-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Plan 50Mb-r</div>
+						</a>
+
+						<a href="/pagos/reportar-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Plan 100Mb-e</div>
+						</a>
+					</div>
 				</div>
+
+				<div class="heading">Soporte y Ayuda</div>
+				<a href="/reportes/" class="sidenav-item">
+					<i class="sidenav-item-icon fas fa-exclamation-circle"></i>
+					<div class="sidenav-item-content">Reportes</div>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+
+				<a href="/support/" class="sidenav-item">
+					<i class="sidenav-item-icon fas fa-wrench"></i>
+					<div class="sidenav-item-content">Asistencia Técnica</div>
+					<i class="fas fa-chevron-right"></i>
+				</a>
 			</nav>
 		</aside>
 
 		<main class="content">
 			<div class="container">
-				<div class="row is-margin-bottom-2">
-					<h1 class="display-1 is-margin-bottom-0">Solicitar Nuevo</h1>
+				<div class="row is-margin-bottom-3">
+					<h1 class="display-1 is-margin-bottom-0">Bienvenida Isabel</h1>
 					<nav class="breadcrumb">
 						<ul>
 							<li><a href="#">Inicio</a></li>
-							<li><a href="#">Solicitar Nuevo</a></li>
+							<li><a href="#">Cix Dashboard</a></li>
 						</ul>
 					</nav>
 				</div>
 
-				<div class="box is-grouped">
-					<section class="box">
-						<div class="columns columns-1">
-							<div class="row">
-								<progress class="progress" value="15" max="100">15%</progress>
-							</div>
-							<div class="row">
-								<h1 class="title text-uppercase">¿Quieres contratar un nuevo servicio?</h1>
-								<p class="subtitle">Contrata un nuevo servicio de CIX rellenando la siguiente información</p>
+				<div class="columns columns-4">
+					<div class="column-3">
+						<section class="box is-grouped is-horizontal">
+							<div class="box">
+								<div class="d-flex j-between a-center is-margin-bottom-1">
+									<div class="start">
+										<h1 class="title text-uppercase">deuda total</h1>
+										<p class="subtitle">Facturas por pagar</p>
+									</div>
+
+									<div class="end">
+										<i class="fas fa-dollar-sign fa-2x is-color-orange"></i>
+									</div>
+								</div>
+
+								<h2 class="is-margin-bottom-1">$5,900.00</h2>
+
+								<p class="is-font-xs">
+									<a href="javascript:0;">22 <span class="is-color-grey-light">Facturas</span></a>
+								</p>
 							</div>
 
-							<div class="row">
-								<div class="steps is-medium has-content-centered">
-									<div class="steps-segment is-active">
-										<div class="steps-marker">1</div>
-										<div class="steps-content">
-											Datos personales
-										</div>
+							<div class="box">
+								<div class="d-flex j-between a-center is-margin-bottom-1">
+									<div class="start">
+										<h1 class="title text-uppercase">pagos por aprobar</h1>
+										<p class="subtitle">Procesando facturas</p>
 									</div>
-									<div class="steps-segment">
-										<div class="steps-marker">2</div>
-										<div class="steps-content">
-											Dirección
-										</div>
+
+									<div class="end">
+										<i class="fas fa-coins fa-2x is-color-orange"></i>
 									</div>
-									<div class="steps-segment">
-										<div class="steps-marker">3</div>
-										<div class="steps-content">
-											Plan
-										</div>
+								</div>
+
+								<h2 class="is-margin-bottom-1">6</h2>
+
+								<a href="javascript:0;" class="is-font-xs">6/22</a>
+							</div>
+
+							<div class="box">
+								<div class="d-flex j-between a-center is-margin-bottom-1">
+									<div class="start">
+										<h1 class="title text-uppercase">deuda total</h1>
+										<p class="subtitle">Facturas por pagar</p>
 									</div>
-									<div class="steps-segment">
-										<div class="steps-marker">4</div>
-										<div class="steps-content">
-											Caja
+
+									<div class="end">
+										<i class="fas fa-exclamation-circle fa-2x is-color-orange"></i>
+									</div>
+								</div>
+
+								<h2 class="is-margin-bottom-1">7</h2>
+
+								<a href="javascript:0;" class="is-font-xs">Ver mis reportes</a>
+							</div>
+						</section>
+
+						<section class="box">
+							<div class="columns columns-1">
+								<div class="row">
+									<div class="columns">
+										<div class="row j-start">
+											<h1 class="title text-uppercase">Consumo de internet</h1>
+											<p class="subtitle">Consulta el consumo de internet hasta ahora</p>
+										</div>
+
+										<div class="row j-end">
+											<select class="select">
+												<option value="0">Internet r-50Mbps</option>
+											</select>
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-					</section>
 
-					<section class="box">
-						<div class="columns columns-1">
-							<div class="row">
-								<h1 class="title">Datos personales</h1>
-								<p class="subtitle">Complete los campos y presione continuar</p>
-							</div>
-							<div class="row">
-								<table class="table">
-									<thead>
-										<tr>
-											<th>CÓDIGO</th>
-											<th>FECHA</th>
-											<th>REFERENCIA</th>
-											<th>BANCO</th>
-											<th>MONTO</th>
-											<th>ESTADO</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr class="primary">
-											<td>S-000912</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Venezuela</td>
-											<td>160.000.000</td>
-											<td class="is-info"><i class="fas fa-undo icon"></i> Procesando</td>
-										</tr>
-										<tr>
-											<td>S-000913</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Banesco</td>
-											<td>160.000.000</td>
-											<td class="is-info"><i class="fas fa-undo icon"></i> Procesando</td>
-										</tr>
-										<tr>
-											<td>S-000914</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Provincial</td>
-											<td>160.000.000</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-										<tr>
-											<td>S-000915</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Venezuela</td>
-											<td>160.000.000</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-										<tr>
-											<td>S-000916</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Venezuela</td>
-											<td>160.000.000</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-										<tr>
-											<td>S-000917</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Venezuela</td>
-											<td>160.000.000</td>
-											<td class="is-danger"><i class="fas fa-ellipsis-h icon"></i> Pendiente</td>
-										</tr>
-										<tr class="primary">
-											<td>S-000918</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Venezuela</td>
-											<td>160.000.000</td>
-											<td class="is-danger"><i class="fas fa-ellipsis-h icon"></i> Pendiente</td>
-										</tr>
-										<tr>
-											<td>S-000919</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Banesco</td>
-											<td>160.000.000</td>
-											<td class="is-danger"><i class="fas fa-ellipsis-h icon"></i> Pendiente</td>
-										</tr>
-										<tr>
-											<td>S-000920</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Banesco</td>
-											<td>160.000.000</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-										<tr>
-											<td>S-000921</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Provincial</td>
-											<td>160.000.000</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="row">
-								<table class="table">
-									<thead>
-										<tr>
-											<th>VER</th>
-											<th>ASUNTO</th>
-											<th>DESCRIPCIÓN CORTA</th>
-											<th>IMPORTANCIA</th>
-											<th>ESTADO</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="icon">
-												<a href="javascript:0;">
-													<i class="fas fa-eye"></i>
-												</a>
-											</td>
-											<td>Internet lento</td>
-											<td>Contraté un servicio de 20Mbps y solo descargo a 5Mbps...</td>
-											<td class="is-primary">Baja</td>
-											<td class="is-success"><i class="fas fa-unlock-alt icon no-border"></i> Abierto</td>
-										</tr>
-										<tr>
-											<td class="icon">
-												<a href="javascript:0;">
-													<i class="fas fa-eye"></i>
-												</a>
-											</td>
-											<td>Servicio intermitente</td>
-											<td>El serviciose cae mucho a lo largo de todo el día...</td>
-											<td class="is-info">Media</td>
-											<td class="is-danger"><i class="fas fa-lock icon no-border"></i> Cerrado</td>
-										</tr>
-										<tr>
-											<td class="icon">
-												<a href="javascript:0;">
-													<i class="fas fa-eye"></i>
-												</a>
-											</td>
-											<td>3 días sin servicio</td>
-											<td>Tengo 3 días sin internet y el pago ya me aparece como completado...</td>
-											<td class="is-danger">Alta</td>
-											<td class="is-danger"><i class="fas fa-lock icon no-border"></i> Cerrado</td>
-										</tr>
-										<tr>
-											<td class="icon">
-												<a href="javascript:0;">
-													<i class="fas fa-eye"></i>
-												</a>
-											</td>
-											<td>Puertos bloqueados</td>
-											<td>Creo que tengo los puertos 7777 bloqueados...</td>
-											<td class="is-dark">Muy alta</td>
-											<td class="is-success"><i class="fas fa-unlock-alt icon no-border"></i> Abierto</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="row">
-								<form class="form">
-									<div class="columns">
-										<div class="field">
-											<label>Nombre</label>
-											<input type="text" placeholder="Edwin Hernandez">
-										</div>
-										<div class="field">
-											<label>Apellido</label>
-											<input type="text" placeholder="Hernandez Lugo">
-										</div>
-										<div class="field">
-											<label>Cédula de identidad</label>
-											<input type="text" placeholder="22.354.671">
-										</div>
-										<div class="field">
-											<label>Número de celular</label>
-											<input type="text" placeholder="0424 953 7531">
-										</div>
-										<div class="field">
-											<label>Número de teléfono local</label>
-											<input type="text" placeholder="0288 221 3578">
-										</div>
+								<div class="row">
+									<div>
+										<canvas id="myChart"></canvas>
 									</div>
-								</form>
+								</div>
+
+								<div class="row">
+									<form class="form">
+										<div class="columns">
+											<div class="field">
+												<label>Rango</label>
+												<select class="select">
+													<option value="0">Ultima semana</option>
+												</select>
+											</div>
+
+											<div class="field">
+												<label>Desde</label>
+												<input type="text" placeholder="16/06/2021">
+											</div>
+
+											<div class="field">
+												<label>Hasta</label>
+												<input type="text" placeholder="16/06/2021">
+											</div>
+										</div>
+									</form>
+								</div>
+
+								<div class="row has-centered">
+									<button type="button" class="button is-primary">
+										<i class="fas fa-chart-bar"></i>
+										Generar Gráfica
+									</button>
+								</div>
 							</div>
-						</div>
-					</section>
-					<section class="box">
-						<div class="columns">
-							<div class="row j-start">
-								<button type="button" class="button is-primary">Atrás</button>
-							</div>
-							<div class="row j-end">
-								<button type="button" class="button is-primary">Siguiente</button>
-							</div>
-						</div>
-					</section>
+						</section>
+					</div>
+
+					<div class="column-1">
+						<ul class="mdui-list">
+							<li class="mdui-list-item mdui-ripple">Inbox</li>
+							<li class="mdui-list-item mdui-ripple">Starred</li>
+							<li class="mdui-list-item mdui-ripple">Send mail</li>
+						</ul>
+					</div>
+
+					<div class="column-4">
+						<section class="box">
+							
+						</section>
+					</div>
 				</div>
 			</div>
 		</main>
@@ -350,5 +280,89 @@
 			</div>
 		</footer>
     </div>
+
+    <script type="text/javascript" src="/assets/js/ccs.js"></script>
+<!--
+    <script type="text/javascript" src="/assets/js/chartist.min.js"></script>
+-->
+    <script type="text/javascript" src="/assets/js/chart.js"></script>
+    <script type="text/javascript">
+		const labels = [
+			'Ene', 'Feb', 'Mzo',
+			'May', 'Jun', 'Jul',
+			'Ago', 'Sep', 'Oct',
+			'Nov', 'Dic'
+		];
+		const data = {
+			labels: labels,
+			datasets: [
+				{
+					label: 'Descarga Mbps',
+					// data: [0,1,2,3,4,5,6,7,8,9,10,11,12],
+					data: [4, 5, 10, 12, 25, 12, 23, 18, 25, 10, 35],
+					backgroundColor: [
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+					],
+					borderColor: []
+				},
+				{
+					label: 'Subida Mbps',
+					data: [5, 3, 7, 9, 0.6, 2, 0.3, 15, 0.8, 1, 9],
+					backgroundColor: [
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+					],
+					borderColor: []
+				}
+			]
+		};
+
+		const config = {
+			type: 'bar',
+			data: data,
+			options: {
+				scales: {
+					y: {
+						beginAtZero: true
+					}
+				}
+			},
+		};
+
+		let myChart = new Chart(
+			document.getElementById('myChart'),
+			config
+		);
+
+		// new Chartist.Line('.ct-line', {
+			// labels: [1, 2, 3, 4, 5, 6, 7, 8],
+			// series: [
+				// [5, 9, 7, 8, 5, 3, 5, 4, 6, 8]
+			// ]
+		// }, {
+			// low: 0,
+			// showArea: true
+		// });
+	</script>
 </body>
 </html>
