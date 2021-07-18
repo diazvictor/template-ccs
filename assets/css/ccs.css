@@ -606,6 +606,10 @@ a {
   background: #d7d7ff;
   border-color: #d7d7ff;
 }
+.button.is-transparent {
+  background: transparent;
+  border: none;
+}
 .button.is-fullwidth {
   width: 100%;
 }
@@ -712,6 +716,49 @@ a {
 .form .field select option {
   font-weight: normal;
 }
+.form .field label.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 22px;
+}
+.form .field label.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.form .field label.switch input:checked + .slider {
+  background-color: #E63C1F;
+}
+.form .field label.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.form .field label.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbcdcf;
+  transition: 0.3s;
+}
+.form .field label.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 1px;
+  bottom: 1px;
+  background-color: #FFFFFF;
+  transition: 0.3s;
+}
+.form .field label.switch .slider.round {
+  border-radius: 34px;
+}
+.form .field label.switch .slider.round:before {
+  border-radius: 50%;
+}
 .form .field label + input,
 .form .field label + select {
   margin-top: 5px;
@@ -758,6 +805,49 @@ select.select:focus {
 }
 select.select option {
   font-weight: normal;
+}
+label.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 22px;
+}
+label.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+label.switch input:checked + .slider {
+  background-color: #E63C1F;
+}
+label.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+label.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbcdcf;
+  transition: 0.3s;
+}
+label.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 1px;
+  bottom: 1px;
+  background-color: #FFFFFF;
+  transition: 0.3s;
+}
+label.switch .slider.round {
+  border-radius: 34px;
+}
+label.switch .slider.round:before {
+  border-radius: 50%;
 }
 label + .input,
 label + .select {
@@ -867,22 +957,22 @@ label + .select {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-.box.is-grouped.is-horizontal {
+.box.is-grouped.is-vertical {
   display: grid;
   grid-auto-flow: column;
 }
-.box.is-grouped.is-horizontal .box {
+.box.is-grouped.is-vertical .box {
   border-radius: 0;
   border-top: 1px solid #d7d7ff;
 }
-.box.is-grouped.is-horizontal .box:not(:last-child) {
+.box.is-grouped.is-vertical .box:not(:last-child) {
   border-right: none;
 }
-.box.is-grouped.is-horizontal .box:first-child {
+.box.is-grouped.is-vertical .box:first-child {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
-.box.is-grouped.is-horizontal .box:last-child {
+.box.is-grouped.is-vertical .box:last-child {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -977,7 +1067,7 @@ label + .select {
   width: 100%;
 }
 .progress::-webkit-progress-bar {
-  background-color: #cbcdcf;
+  background-color: #F0F0FF;
   border-radius: 4px;
 }
 .progress::-moz-progress-bar {
@@ -985,6 +1075,10 @@ label + .select {
 }
 .progress::-webkit-progress-value {
   background: #E63C1F;
+  border-radius: 9999px;
+}
+.progress.is-small {
+  height: 0.7rem;
 }
 .label {
   background: #E63C1F;
@@ -1253,6 +1347,21 @@ label + .select {
 .is-margin-bottom-4 {
   margin-bottom: 40px;
 }
+.is-gap-0 {
+  grid-gap: 0;
+}
+.is-gap-1 {
+  grid-gap: 10px;
+}
+.is-gap-2 {
+  grid-gap: 20px;
+}
+.is-gap-3 {
+  grid-gap: 30px;
+}
+.is-gap-4 {
+  grid-gap: 40px;
+}
 .is-color-orange {
   color: #E63C1F;
 }
@@ -1261,4 +1370,22 @@ label + .select {
 }
 .is-font-xs {
   font-size: 13px;
+}
+.map .row:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+.map .row:first-child .end {
+  display: grid;
+  grid-template-columns: 2fr auto;
+  align-items: center;
+  grid-gap: 30px;
+}
+.map .row:first-child .end .column:first-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+.map .row:first-child .end .column:first-child progress {
+  grid-column: span 2;
 }

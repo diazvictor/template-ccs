@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/ccs.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/chartist.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/leaflet.css">
+	<style type="text/css">
+		#mapid {
+			min-height: 50vh;
+		}
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -136,7 +142,7 @@
 
 				<div class="columns columns-4">
 					<div class="column-3">
-						<section class="box is-grouped is-horizontal">
+						<section class="box is-grouped is-vertical">
 							<div class="box">
 								<div class="d-flex j-between a-center is-margin-bottom-1">
 									<div class="start">
@@ -248,16 +254,42 @@
 					</div>
 
 					<div class="column-1">
-						<ul class="mdui-list">
-							<li class="mdui-list-item mdui-ripple">Inbox</li>
-							<li class="mdui-list-item mdui-ripple">Starred</li>
-							<li class="mdui-list-item mdui-ripple">Send mail</li>
-						</ul>
+						<div class="panel">
+							<a class="panel-item">Inbox</a>
+							<a class="panel-item">Starred</a>
+							<a class="panel-item">Send mail</a>
+						</div>
 					</div>
 
 					<div class="column-4">
-						<section class="box">
-							
+						<section class="box map">
+							<div class="row">
+								<div class="start">
+									<h1 class="title text-uppercase">tu ubicación</h1>
+									<p class="subtitle">Ubicación y calidad del radio enlace</p>
+								</div>
+
+								<div class="end">
+									<div class="column">
+										<span class="is-font-xs">Calidad de la señal</span>
+										<span class="is-font-xs j-end">90%</span>
+
+										<progress class="progress is-small" value="90" max="100">90%</progress>
+									</div>
+
+									<div class="column">
+										<button type="button" class="button is-icon is-transparent">
+											<i class="is-color-orange fas fa-sync"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="is-margin-bottom-2"></div>
+
+							<div class="row">
+								<div id="mapid"></div>
+							</div>
 						</section>
 					</div>
 				</div>
@@ -282,10 +314,8 @@
     </div>
 
     <script type="text/javascript" src="/assets/js/ccs.js"></script>
-<!--
-    <script type="text/javascript" src="/assets/js/chartist.min.js"></script>
--->
     <script type="text/javascript" src="/assets/js/chart.js"></script>
+    <script type="text/javascript" src="/assets/js/leaflet.js"></script>
     <script type="text/javascript">
 		const labels = [
 			'Ene', 'Feb', 'Mzo',
@@ -353,16 +383,9 @@
 			document.getElementById('myChart'),
 			config
 		);
-
-		// new Chartist.Line('.ct-line', {
-			// labels: [1, 2, 3, 4, 5, 6, 7, 8],
-			// series: [
-				// [5, 9, 7, 8, 5, 3, 5, 4, 6, 8]
-			// ]
-		// }, {
-			// low: 0,
-			// showArea: true
-		// });
 	</script>
+    <script type="text/javascript">
+		let mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    </script>
 </body>
 </html>
