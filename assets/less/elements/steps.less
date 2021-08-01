@@ -12,6 +12,12 @@
     font-size: 1rem;
     list-style: none;
 
+	@media screen and (max-width: 375px) {
+		& {
+			height: 2.8rem;
+		}
+	}
+
 	&-segment {
 		position: relative;
 
@@ -102,6 +108,25 @@
 		justify-content: center;
 		position: relative;
 		z-index: 5;
+
+		@media screen and (max-width: 375px) {
+			&:hover {
+				& + .steps-content {
+					display: block;
+					position: absolute;
+					z-index: 10;
+					background: rgba(0,0,0, 0.8);
+					text-align: left;
+					padding: 5px 10px;
+					border-radius: 999px;
+					color: white;
+					font-size: 0.6rem;
+					left: 15px;
+					bottom: -30px;
+					width: max-content;
+				}
+			}
+		}
 	}
 
 	&-content {
@@ -109,5 +134,13 @@
 		margin-left: 0.5em;
 		margin-right: 0.5em;
 		padding-top: 0.2em;
+
+		@media screen and (max-width: 375px) {
+			& {
+				display: none;
+				margin: 0;
+				padding-top: 0;
+			}
+		}
 	}
 }

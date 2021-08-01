@@ -22,7 +22,7 @@
 .generate-columns(@breakpoint) {
 	each(range(@columns), {
 		&.columns-@{breakpoint}-@{index} {
-			grid-template-columns: repeat(@index, (@index * @columns-size / @columns));
+			grid-template-columns: repeat(@index, 1fr);
 		}
 	});
 
@@ -50,7 +50,7 @@
 
 	each(range(@columns), {
 		&.columns-@{index} {
-			grid-template-columns: repeat(@index, (@index * @columns-size / @columns));
+			grid-template-columns: repeat(@index, 1fr);
 		}
 	});
 

@@ -12,11 +12,26 @@
 		<header class="header">
 			<nav class="navbar">
 				<div class="navbar-start">
+					<button type="button" id="toggle-sidebar" class="button is-icon">
+						<i></i>
+					</button>
+
 					<div class="searchbar">
 						<input type="text" class="input" placeholder="Buscar...">
 						<button type="button" class="button is-primary button-search"><i class="fas fa-search"></i>
 					</div>
 				</div>
+
+				<div class="navbar-logo">
+					<img src="/assets/images/logo-black.svg">
+	
+					<span class="title">
+						customer
+						<br>
+						support
+					</span>
+				</div>
+
 				<div class="navbar-end">
 					<div class="buttons">
 						<a href="javascript:0;" class="button is-icon">
@@ -28,11 +43,19 @@
 							<span class="label is-floating">6</span>
 						</a>
 					</div>
+
+					<button type="button" class="button is-icon menu">
+						<i class="fas fa-stream"></i>
+					</button>
 				</div>
 			</nav>
 		</header>
 
 		<aside class="sidebar">
+			<button type="button" id="close-sidebar" class="button is-icon is-transparent">
+				<i class="fas fa-chevron-left"></i>
+			</button>
+
 			<div class="sidebar-brand">
 				<img src="/assets/images/logo-white.svg">
 
@@ -184,7 +207,7 @@
 
 							<div class="row">
 								<form class="form">
-									<div class="columns">
+									<div class="columns columns-3 columns-md-2 columns-sm-1">
 										<div class="field">
 											<label>Nombre</label>
 											<input type="text" placeholder="Edwin Hernandez">
@@ -211,14 +234,10 @@
 										</div>
 									</div>
 
-									<div class="columns">
-										<div class="row j-start">
-											<button type="button" class="button is-primary">Atrás</button>
-										</div>
+									<div class="row d-flex j-between">
+										<button type="button" class="button is-primary">Atrás</button>
 
-										<div class="row j-end">
-											<button type="button" class="button is-primary">Siguiente</button>
-										</div>
+										<button type="button" class="button is-primary">Siguiente</button>
 									</div>
 								</form>
 							</div>

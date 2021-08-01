@@ -16,7 +16,72 @@
 	justify-content: space-between;
 	align-items: center;
 
+	.menu {
+		display: none
+	}
+
+	&-start {
+		display: flex;
+	}
+
+	#toggle-sidebar {
+		margin-right: 0.75rem;
+
+		i {
+			font-size: 1rem;
+			font-style: normal;
+
+			&::before {
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				content: "\f053";
+
+				@media screen and (max-width: @breakpoints[large]) {
+					& {
+						content: "\f054";
+					}
+				}
+
+			}
+		}
+
+		&.is-active {
+			i {
+				&::before {
+					content: "\f054";
+				}
+			}
+		}
+	}
+
+	&-logo {
+		display: none;
+
+		@media screen and (max-width: @breakpoints[small]) {
+			& {				
+				display: flex
+			}
+		}
+
+		img {
+			width: 32px;
+			height: 32px;
+			margin-right: 5px;
+		}
+
+		.title {
+			text-transform: capitalize;
+			font-weight: 600;
+		}
+	}
+
 	.searchbar {
+		@media screen and (max-width: @breakpoints[small]) {
+			& {
+				display: none
+			}
+		}
+
 		input {
 			&.input {
 				padding: 0.625rem 1rem;
@@ -45,5 +110,16 @@
 		grid-auto-flow: column;
 		grid-template-columns: auto;
 	}
-}
 
+	@media screen and (max-width: @breakpoints[small]) {
+		&-end {
+			.buttons {
+				display: none
+			}
+
+			.menu {
+				display: block
+			}
+		}
+	}
+}

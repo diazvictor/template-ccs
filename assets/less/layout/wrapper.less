@@ -15,6 +15,35 @@
 						 "sidebar content"
 						 "sidebar footer";
 	min-height: 900px;
+	overflow-x: hidden;
+
+	@media screen and (max-width: @breakpoints[large]) {
+		& {
+			grid-template-columns: 1fr;
+			grid-template-areas: "header"
+								 "content"
+								 "footer";
+		}
+	}
+
+	&.not-sidebar {
+		grid-template-columns: 1fr;
+		grid-template-areas: "header"
+							 "content"
+							 "footer";
+
+		@media screen and (max-width: @breakpoints[large]) {
+			& {
+				.sidebar {
+					display: block !important
+				}
+			}
+		}
+
+		.sidebar {
+			display: none;
+		}
+	}
 
 	.header {
 		grid-area: header
@@ -24,6 +53,23 @@
 		grid-area: sidebar;
 		background-color: @gradient[primary];
 		background-image: linear-gradient(@gradient[primary], @gradient[secondary]);
+
+		#close-sidebar {
+			color: rgba(255, 255, 255, 0.2);
+			position: absolute;
+			top: 40px;
+			right: 15px;
+		}
+
+		@media screen and (max-width: @breakpoints[large]) {
+			& {
+				display: none;
+				position: fixed;
+				overflow-y: auto;
+				height: 100%;
+				z-index: 99999;
+			}
+		}
 
 		&-brand {
 			display: flex;
@@ -163,6 +209,24 @@
 		color: lighten(@grey, 30%);
 		font-size: 12px;
 		text-align: center;
+
+		@media screen and (max-width: @breakpoints[small]) {
+			& {
+				grid-template-columns: 1fr;
+				padding: 18px 0 18px 0;
+
+				p {
+					padding: 0 12px 18px 12px;
+				}
+
+				.social {
+					margin-right: 0 !important;
+					justify-content: center;
+					padding-top: 18px;
+					border-top: 1px solid darken(@bg-light, 3%);
+				}
+			}
+		}
 
 		.social {
 			display: grid;

@@ -46,6 +46,18 @@
 			display: grid;
 			grid-auto-flow: column;
 
+			@media screen and (max-width: @breakpoints[medium]) {
+				& {
+					grid-gap: 10px;
+					grid-auto-flow: row;
+
+					.box {
+						border-radius: @border-radius-width !important;
+						border: 1px solid darken(@white-2, 5%) !important;
+					}
+				}
+			}
+
 			.box {
 				border-radius: 0;
 				border-top: 1px solid darken(@white-2, 5%);

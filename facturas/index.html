@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,10 +12,24 @@
 		<header class="header">
 			<nav class="navbar">
 				<div class="navbar-start">
+					<button type="button" id="toggle-sidebar" class="button is-icon">
+						<i></i>
+					</button>
+
 					<div class="searchbar">
 						<input type="text" class="input" placeholder="Buscar...">
 						<button type="button" class="button is-primary button-search"><i class="fas fa-search"></i>
 					</div>
+				</div>
+
+				<div class="navbar-logo">
+					<img src="/assets/images/logo-black.svg">
+	
+					<span class="title">
+						customer
+						<br>
+						support
+					</span>
 				</div>
 
 				<div class="navbar-end">
@@ -25,17 +38,24 @@
 							<i class="far fa-bell"></i>
 							<span class="label is-floating">4</span>
 						</a>
-
 						<a href="javascript:0;" class="button is-icon">
 							<i class="far fa-comment-alt"></i>
 							<span class="label is-floating">6</span>
 						</a>
 					</div>
+
+					<button type="button" class="button is-icon menu">
+						<i class="fas fa-stream"></i>
+					</button>
 				</div>
 			</nav>
 		</header>
 
 		<aside class="sidebar">
+			<button type="button" id="close-sidebar" class="button is-icon is-transparent">
+				<i class="fas fa-chevron-left"></i>
+			</button>
+
 			<div class="sidebar-brand">
 				<img src="/assets/images/logo-white.svg">
 
@@ -146,18 +166,14 @@
 								ellos para mostrar las facturas de cada uno de ellos.</p>
 							</div>
 
-							<div class="row">
-								<div class="columns columns-3">
-									<div class="row">
-										<label for="services">Servicios</label>
-										<select class="select">
-											<option value="0" data-name="Plutón">Internet r-20Mbps</option>
-										</select>
-									</div>
-								</div>
+							<div class="row j-start j-md-normal">
+								<label for="services">Servicios</label>
+								<select class="select">
+									<option value="0" data-name="Plutón">Internet r-20Mbps</option>
+								</select>
 							</div>
 
-							<div class="row">
+							<div class="row responsive-table">
 								<table class="table">
 									<thead>
 										<tr>

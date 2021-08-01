@@ -22,4 +22,18 @@ window.addEventListener("load", () => {
 			item.classList.toggle("is-collapsible");
 		});
 	});
+
+	let sidebar = document.querySelector(".wrapper");
+	let toggleSidebar = document.getElementById("toggle-sidebar");
+	let closeSidebar = document.getElementById("close-sidebar");
+
+	toggleSidebar.addEventListener("click", () => {
+		sidebar.classList.toggle("not-sidebar");
+
+		toggleSidebar.classList.toggle("is-active");
+	});
+
+	closeSidebar.addEventListener("click", () => {
+		sidebar.classList.remove("not-sidebar");
+	});
 });
