@@ -15,8 +15,8 @@ window.addEventListener("load", () => {
 		console.log(item);
 
 		item.addEventListener("click", () => {
-			if (item.classList.contains('is-active')) {
-				item.classList.remove('is-active');
+			if (item.classList.contains("is-active")) {
+				item.classList.remove("is-active");
 			}
 
 			item.classList.toggle("is-collapsible");
@@ -35,5 +35,13 @@ window.addEventListener("load", () => {
 
 	closeSidebar.addEventListener("click", () => {
 		sidebar.classList.remove("not-sidebar");
+	});
+
+	const filebutton = document.querySelector(".file");
+	let fileinput = filebutton.querySelector("input[type=file]");
+	let filename = filebutton.querySelector("span");
+	
+	fileinput.addEventListener("change", () => {
+		filename.innerText = fileinput.files[0].name;
 	});
 });

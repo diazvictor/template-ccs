@@ -204,37 +204,37 @@ a {
   grid-template-columns: repeat(1, 1fr);
 }
 .columns.columns-2 {
-  grid-template-columns: repeat(2, 2fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 .columns.columns-3 {
-  grid-template-columns: repeat(3, 3fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 .columns.columns-4 {
-  grid-template-columns: repeat(4, 4fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 .columns.columns-5 {
-  grid-template-columns: repeat(5, 5fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 .columns.columns-6 {
-  grid-template-columns: repeat(6, 6fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 .columns.columns-7 {
-  grid-template-columns: repeat(7, 7fr);
+  grid-template-columns: repeat(7, 1fr);
 }
 .columns.columns-8 {
-  grid-template-columns: repeat(8, 8fr);
+  grid-template-columns: repeat(8, 1fr);
 }
 .columns.columns-9 {
-  grid-template-columns: repeat(9, 9fr);
+  grid-template-columns: repeat(9, 1fr);
 }
 .columns.columns-10 {
-  grid-template-columns: repeat(10, 10fr);
+  grid-template-columns: repeat(10, 1fr);
 }
 .columns.columns-11 {
-  grid-template-columns: repeat(11, 11fr);
+  grid-template-columns: repeat(11, 1fr);
 }
 .columns.columns-12 {
-  grid-template-columns: repeat(12, 12fr);
+  grid-template-columns: repeat(12, 1fr);
 }
 .columns .column-1 {
   grid-column: span 1;
@@ -282,37 +282,37 @@ a {
     grid-template-columns: repeat(1, 1fr);
   }
   .columns.columns-lg-2 {
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .columns.columns-lg-3 {
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .columns.columns-lg-4 {
-    grid-template-columns: repeat(4, 4fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .columns.columns-lg-5 {
-    grid-template-columns: repeat(5, 5fr);
+    grid-template-columns: repeat(5, 1fr);
   }
   .columns.columns-lg-6 {
-    grid-template-columns: repeat(6, 6fr);
+    grid-template-columns: repeat(6, 1fr);
   }
   .columns.columns-lg-7 {
-    grid-template-columns: repeat(7, 7fr);
+    grid-template-columns: repeat(7, 1fr);
   }
   .columns.columns-lg-8 {
-    grid-template-columns: repeat(8, 8fr);
+    grid-template-columns: repeat(8, 1fr);
   }
   .columns.columns-lg-9 {
-    grid-template-columns: repeat(9, 9fr);
+    grid-template-columns: repeat(9, 1fr);
   }
   .columns.columns-lg-10 {
-    grid-template-columns: repeat(10, 10fr);
+    grid-template-columns: repeat(10, 1fr);
   }
   .columns.columns-lg-11 {
-    grid-template-columns: repeat(11, 11fr);
+    grid-template-columns: repeat(11, 1fr);
   }
   .columns.columns-lg-12 {
-    grid-template-columns: repeat(12, 12fr);
+    grid-template-columns: repeat(12, 1fr);
   }
   .columns .column-lg-1 {
     grid-column: span 1;
@@ -356,37 +356,37 @@ a {
     grid-template-columns: repeat(1, 1fr);
   }
   .columns.columns-md-2 {
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .columns.columns-md-3 {
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .columns.columns-md-4 {
-    grid-template-columns: repeat(4, 4fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .columns.columns-md-5 {
-    grid-template-columns: repeat(5, 5fr);
+    grid-template-columns: repeat(5, 1fr);
   }
   .columns.columns-md-6 {
-    grid-template-columns: repeat(6, 6fr);
+    grid-template-columns: repeat(6, 1fr);
   }
   .columns.columns-md-7 {
-    grid-template-columns: repeat(7, 7fr);
+    grid-template-columns: repeat(7, 1fr);
   }
   .columns.columns-md-8 {
-    grid-template-columns: repeat(8, 8fr);
+    grid-template-columns: repeat(8, 1fr);
   }
   .columns.columns-md-9 {
-    grid-template-columns: repeat(9, 9fr);
+    grid-template-columns: repeat(9, 1fr);
   }
   .columns.columns-md-10 {
-    grid-template-columns: repeat(10, 10fr);
+    grid-template-columns: repeat(10, 1fr);
   }
   .columns.columns-md-11 {
-    grid-template-columns: repeat(11, 11fr);
+    grid-template-columns: repeat(11, 1fr);
   }
   .columns.columns-md-12 {
-    grid-template-columns: repeat(12, 12fr);
+    grid-template-columns: repeat(12, 1fr);
   }
   .columns .column-md-1 {
     grid-column: span 1;
@@ -430,37 +430,37 @@ a {
     grid-template-columns: repeat(1, 1fr);
   }
   .columns.columns-sm-2 {
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .columns.columns-sm-3 {
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .columns.columns-sm-4 {
-    grid-template-columns: repeat(4, 4fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .columns.columns-sm-5 {
-    grid-template-columns: repeat(5, 5fr);
+    grid-template-columns: repeat(5, 1fr);
   }
   .columns.columns-sm-6 {
-    grid-template-columns: repeat(6, 6fr);
+    grid-template-columns: repeat(6, 1fr);
   }
   .columns.columns-sm-7 {
-    grid-template-columns: repeat(7, 7fr);
+    grid-template-columns: repeat(7, 1fr);
   }
   .columns.columns-sm-8 {
-    grid-template-columns: repeat(8, 8fr);
+    grid-template-columns: repeat(8, 1fr);
   }
   .columns.columns-sm-9 {
-    grid-template-columns: repeat(9, 9fr);
+    grid-template-columns: repeat(9, 1fr);
   }
   .columns.columns-sm-10 {
-    grid-template-columns: repeat(10, 10fr);
+    grid-template-columns: repeat(10, 1fr);
   }
   .columns.columns-sm-11 {
-    grid-template-columns: repeat(11, 11fr);
+    grid-template-columns: repeat(11, 1fr);
   }
   .columns.columns-sm-12 {
-    grid-template-columns: repeat(12, 12fr);
+    grid-template-columns: repeat(12, 1fr);
   }
   .columns .column-sm-1 {
     grid-column: span 1;
@@ -504,37 +504,37 @@ a {
     grid-template-columns: repeat(1, 1fr);
   }
   .columns.columns-xs-2 {
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .columns.columns-xs-3 {
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .columns.columns-xs-4 {
-    grid-template-columns: repeat(4, 4fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .columns.columns-xs-5 {
-    grid-template-columns: repeat(5, 5fr);
+    grid-template-columns: repeat(5, 1fr);
   }
   .columns.columns-xs-6 {
-    grid-template-columns: repeat(6, 6fr);
+    grid-template-columns: repeat(6, 1fr);
   }
   .columns.columns-xs-7 {
-    grid-template-columns: repeat(7, 7fr);
+    grid-template-columns: repeat(7, 1fr);
   }
   .columns.columns-xs-8 {
-    grid-template-columns: repeat(8, 8fr);
+    grid-template-columns: repeat(8, 1fr);
   }
   .columns.columns-xs-9 {
-    grid-template-columns: repeat(9, 9fr);
+    grid-template-columns: repeat(9, 1fr);
   }
   .columns.columns-xs-10 {
-    grid-template-columns: repeat(10, 10fr);
+    grid-template-columns: repeat(10, 1fr);
   }
   .columns.columns-xs-11 {
-    grid-template-columns: repeat(11, 11fr);
+    grid-template-columns: repeat(11, 1fr);
   }
   .columns.columns-xs-12 {
-    grid-template-columns: repeat(12, 12fr);
+    grid-template-columns: repeat(12, 1fr);
   }
   .columns .column-xs-1 {
     grid-column: span 1;
@@ -679,17 +679,17 @@ a {
   display: flex;
   flex-flow: column;
 }
-.form .field input {
+.form .field input[type="text"] {
   background: #FFFFFF;
   padding: 0.5rem 0.625rem;
   border: 1px solid #cbcdcf;
   border-radius: 5px;
 }
-.form .field input::placeholder {
+.form .field input[type="text"]::placeholder {
   color: #95999f;
   font-weight: 500;
 }
-.form .field input:focus {
+.form .field input[type="text"]:focus {
   border-color: #95999f;
 }
 .form .field select {
@@ -721,6 +721,68 @@ a {
 }
 .form .field select option {
   font-weight: normal;
+}
+.form .field textarea {
+  background: #FFFFFF;
+  padding: 1rem;
+  font-size: 14px;
+  font-weight: 450;
+  border: 1px solid #cbcdcf;
+  border-radius: 5px;
+}
+.form .field textarea::placeholder {
+  color: #95999f;
+}
+.form .field textarea:focus {
+  border-color: #95999f;
+}
+.form .field label.file {
+  display: flex;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}
+.form .field label.file input[type="file"] {
+  display: none;
+}
+.form .field label.file span {
+  font-size: 14px;
+  font-weight: 450;
+  padding: 0.75rem 1.25rem;
+  background: white;
+  border: 1px solid #cbcdcf;
+  display: block;
+  border-right: none;
+  width: 100%;
+  color: #95999f;
+  font-weight: 500;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.form .field label.file strong {
+  color: #FFFFFF;
+  background-color: #E63C1F;
+  font-weight: normal;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  border: 1px solid #E63C1F;
+  display: flex;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form .field label.file strong i {
+  margin-right: 10px;
+}
+.form .field label.file strong:active {
+  box-shadow: 0 0 0 0.2rem rgba(230, 60, 31, 0.5);
+}
+.form .field label.file strong:hover {
+  background: #d43318;
+  border-color: #d43318;
+}
+.form .field label + label.switch {
+  margin-top: 0 !important;
 }
 .form .field label.switch {
   position: relative;
@@ -765,21 +827,37 @@ a {
 .form .field label.switch .slider.round:before {
   border-radius: 50%;
 }
-.form .field label + input,
-.form .field label + select {
+.form .field label + input[type="text"],
+.form .field label + label,
+.form .field label + select,
+.form .field label + textarea {
   margin-top: 5px;
 }
-input.input {
+input[type="text"].input {
   background: #FFFFFF;
   padding: 0.5rem 0.625rem;
   border: 1px solid #cbcdcf;
   border-radius: 5px;
 }
-input.input::placeholder {
+input[type="text"].input::placeholder {
   color: #95999f;
   font-weight: 500;
 }
-input.input:focus {
+input[type="text"].input:focus {
+  border-color: #95999f;
+}
+textarea.textarea {
+  background: #FFFFFF;
+  padding: 1rem;
+  font-size: 14px;
+  font-weight: 450;
+  border: 1px solid #cbcdcf;
+  border-radius: 5px;
+}
+textarea.textarea::placeholder {
+  color: #95999f;
+}
+textarea.textarea:focus {
   border-color: #95999f;
 }
 select.select {
@@ -859,6 +937,10 @@ label + .input,
 label + .select {
   margin-top: 5px;
 }
+.responsive-table {
+  width: 100%;
+  overflow-x: auto;
+}
 .table {
   width: 100%;
   border-spacing: 0;
@@ -880,6 +962,16 @@ label + .select {
   padding: 8px 10px;
   font-size: 14px;
   border: 1px solid #F0F0FF;
+}
+@media screen and (max-width: 1024px) {
+  .table td {
+    text-align: center;
+  }
+  .table td .icon {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 5px auto;
+  }
 }
 .table td.icon {
   text-align: center;
@@ -967,6 +1059,16 @@ label + .select {
   display: grid;
   grid-auto-flow: column;
 }
+@media screen and (max-width: 768px) {
+  .box.is-grouped.is-vertical {
+    grid-gap: 10px;
+    grid-auto-flow: row;
+  }
+  .box.is-grouped.is-vertical .box {
+    border-radius: 10px !important;
+    border: 1px solid #d7d7ff !important;
+  }
+}
 .box.is-grouped.is-vertical .box {
   border-radius: 0;
   border-top: 1px solid #d7d7ff;
@@ -986,6 +1088,11 @@ label + .select {
   display: flex;
   font-size: 1rem;
   list-style: none;
+}
+@media screen and (max-width: 375px) {
+  .steps {
+    height: 2.8rem;
+  }
 }
 .steps-segment {
   position: relative;
@@ -1055,11 +1162,34 @@ label + .select {
   position: relative;
   z-index: 5;
 }
+@media screen and (max-width: 375px) {
+  .steps-marker:hover + .steps-content {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: left;
+    padding: 5px 10px;
+    border-radius: 999px;
+    color: white;
+    font-size: 0.6rem;
+    left: 15px;
+    bottom: -30px;
+    width: max-content;
+  }
+}
 .steps-content {
   margin-top: 2rem;
   margin-left: 0.5em;
   margin-right: 0.5em;
   padding-top: 0.2em;
+}
+@media screen and (max-width: 375px) {
+  .steps-content {
+    display: none;
+    margin: 0;
+    padding-top: 0;
+  }
 }
 .progress {
   -moz-appearance: none;
@@ -1102,12 +1232,63 @@ label + .select {
   position: relative;
   padding: 3px 5px;
 }
+.label.is-info {
+  background: #01B8FF;
+}
 .navbar {
   background-color: #FFFFFF;
   padding: 0.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.navbar .menu {
+  display: none;
+}
+.navbar-start {
+  display: flex;
+}
+.navbar #toggle-sidebar {
+  margin-right: 0.75rem;
+}
+.navbar #toggle-sidebar i {
+  font-size: 1rem;
+  font-style: normal;
+}
+.navbar #toggle-sidebar i::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f053";
+}
+@media screen and (max-width: 1024px) {
+  .navbar #toggle-sidebar i::before {
+    content: "\f054";
+  }
+}
+.navbar #toggle-sidebar.is-active i::before {
+  content: "\f054";
+}
+.navbar-logo {
+  display: none;
+}
+@media screen and (max-width: 425px) {
+  .navbar-logo {
+    display: flex;
+  }
+}
+.navbar-logo img {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+}
+.navbar-logo .title {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+@media screen and (max-width: 425px) {
+  .navbar .searchbar {
+    display: none;
+  }
 }
 .navbar .searchbar input.input {
   padding: 0.625rem 1rem;
@@ -1130,6 +1311,14 @@ label + .select {
   grid-gap: 20px;
   grid-auto-flow: column;
   grid-template-columns: auto;
+}
+@media screen and (max-width: 425px) {
+  .navbar-end .buttons {
+    display: none;
+  }
+  .navbar-end .menu {
+    display: block;
+  }
 }
 .breadcrumb {
   font-size: 1rem;
@@ -1167,7 +1356,6 @@ label + .select {
   padding: 1.6rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .panel-item {
   padding: 1rem 1.6rem;
@@ -1193,11 +1381,17 @@ label + .select {
   margin-top: 5px;
 }
 .panel-item .end .title {
-  display: flex;
-  justify-content: space-between;
+  text-align: right;
 }
-.panel-item .end .title i {
-  margin-left: 5px;
+@media screen and (max-width: 1024px) {
+  .panel-item .end .title {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  .panel-item .end .title {
+    text-align: right;
+  }
 }
 .panel-foot {
   padding: 1.6rem;
@@ -1212,6 +1406,25 @@ label + .select {
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "sidebar header" "sidebar content" "sidebar footer";
   min-height: 900px;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "content" "footer";
+  }
+}
+.wrapper.not-sidebar {
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "content" "footer";
+}
+@media screen and (max-width: 1024px) {
+  .wrapper.not-sidebar .sidebar {
+    display: block !important;
+  }
+}
+.wrapper.not-sidebar .sidebar {
+  display: none;
 }
 .wrapper .header {
   grid-area: header;
@@ -1220,6 +1433,21 @@ label + .select {
   grid-area: sidebar;
   background-color: #010032;
   background-image: linear-gradient(#010032, #160048);
+}
+.wrapper .sidebar #close-sidebar {
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 40px;
+  right: 15px;
+}
+@media screen and (max-width: 1024px) {
+  .wrapper .sidebar {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    height: 100%;
+    z-index: 99999;
+  }
 }
 .wrapper .sidebar-brand {
   display: flex;
@@ -1270,7 +1498,7 @@ label + .select {
   display: none;
 }
 .wrapper .sidebar .sidenav-collapse-item-body .sidenav-item {
-  padding: 10px 70px;
+  padding: 10px 36px 10px 70px;
   align-items: center;
   font-size: 0.8rem;
 }
@@ -1320,6 +1548,21 @@ label + .select {
   color: #95999f;
   font-size: 12px;
   text-align: center;
+}
+@media screen and (max-width: 425px) {
+  .wrapper .footer {
+    grid-template-columns: 1fr;
+    padding: 18px 0 18px 0;
+  }
+  .wrapper .footer p {
+    padding: 0 12px 18px 12px;
+  }
+  .wrapper .footer .social {
+    margin-right: 0 !important;
+    justify-content: center;
+    padding-top: 18px;
+    border-top: 1px solid #e1e1ff;
+  }
 }
 .wrapper .footer .social {
   display: grid;
@@ -1429,6 +1672,9 @@ label + .select {
 .is-font-xs {
   font-size: 13px;
 }
+.is-hidden-md {
+  display: none;
+}
 .info .box {
   display: flex;
   flex-flow: column;
@@ -1437,9 +1683,27 @@ label + .select {
 .info .box > div .end {
   margin-left: 10px;
 }
+@media screen and (max-width: 768px) {
+  .j-md-normal {
+    justify-self: normal !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .j-sm-normal {
+    justify-self: normal !important;
+  }
+}
 .map .row:first-child {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 425px) {
+  .map .row:first-child {
+    flex-flow: column;
+  }
+  .map .row:first-child .end {
+    margin-top: 30px;
+  }
 }
 .map .row:first-child .end {
   display: grid;
