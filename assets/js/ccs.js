@@ -38,10 +38,10 @@ window.addEventListener("load", () => {
 	});
 
 	const filebutton = document.querySelector(".file");
-	let fileinput = filebutton.querySelector("input[type=file]");
-	let filename = filebutton.querySelector("span");
+	let fileinput = filebutton.querySelector("label input[type=file]");
+	let filename = document.querySelector(".file input[type=text]");
 	
 	fileinput.addEventListener("change", () => {
-		filename.innerText = fileinput.files[0].name;
+		filename.value = fileinput.files[0].name;
 	});
 });

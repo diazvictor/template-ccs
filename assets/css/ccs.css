@@ -736,50 +736,51 @@ a {
 .form .field textarea:focus {
   border-color: #95999f;
 }
-.form .field label.file {
+.form .field .file {
   display: flex;
-  cursor: pointer;
-  border-radius: 4px;
+}
+.form .field .file input[type="text"] {
   width: 100%;
-}
-.form .field label.file input[type="file"] {
-  display: none;
-}
-.form .field label.file span {
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-radius: 4px;
   font-size: 14px;
   font-weight: 450;
-  padding: 0.75rem 1.25rem;
-  background: white;
-  border: 1px solid #cbcdcf;
-  display: block;
-  border-right: none;
-  width: 100%;
   color: #95999f;
-  font-weight: 500;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
 }
-.form .field label.file strong {
+.form .field .file label {
+  display: flex;
   color: #FFFFFF;
   background-color: #E63C1F;
   font-weight: normal;
   padding: 0.75rem 1.25rem;
   text-align: center;
   border: 1px solid #E63C1F;
-  display: flex;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.form .field label.file strong i {
+.form .field .file label i {
   margin-right: 10px;
 }
-.form .field label.file strong:active {
+@media screen and (max-width: 425px) {
+  .form .field .file label i {
+    margin-right: 0;
+  }
+  .form .field .file label span {
+    display: none;
+  }
+}
+.form .field .file label:active {
   box-shadow: 0 0 0 0.2rem rgba(230, 60, 31, 0.5);
 }
-.form .field label.file strong:hover {
+.form .field .file label:hover {
   background: #d43318;
   border-color: #d43318;
+}
+.form .field .file label input[type="file"] {
+  display: none;
 }
 .form .field label + label.switch {
   margin-top: 0 !important;
@@ -840,7 +841,8 @@ a {
 .form .field label + input[type="text"],
 .form .field label + label,
 .form .field label + select,
-.form .field label + textarea {
+.form .field label + textarea,
+.form .field label + .file {
   margin-top: 5px;
 }
 input[type="text"].input {
