@@ -35,7 +35,6 @@
 			border-right: none;
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
-			border-radius: 4px;
 			font-size: 14px;
 			font-weight: 450;
 			color: @border-focus;
@@ -197,6 +196,24 @@
 			}
 		}
 	}
+
+	.has-icon {
+		position: relative;
+
+		input {
+			padding-right: 2rem;
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.is-right {
+			position: absolute;
+			right: 0;
+			padding: 0.688rem;
+			font-size: 0.875rem;
+			color: @border-focus;
+		}
+	}
 }
 
 .form {
@@ -220,6 +237,10 @@
 			#forms > .file();
 		}
 
+		.has-icon {
+			#forms > .has-icon();
+		}
+
 		label {
 			& + label.switch {
 				margin-top: 0 !important
@@ -231,7 +252,7 @@
 
 			& + input[type="text"], & + label,
 			& + select, & + textarea,
-			& + .file {
+			& + .file, & + .has-icon {
 				margin-top: 5px;
 			}
 		}

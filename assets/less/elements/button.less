@@ -28,7 +28,17 @@
 
 		&:hover {
 			background: darken(@bg-primary, 5%);
-			border-color:darken(@bg-primary, 5%) ;
+			border-color:darken(@bg-primary, 5%);
+		}
+
+		&[disabled] {
+			opacity: 0.5;
+
+			&:hover {
+				cursor: default;
+				background: @bg-primary;
+				border-color: @bg-primary;
+			}
 		}
 	}
 
@@ -44,6 +54,16 @@
 		&:hover {
 			background: darken(@bg-light, 5%);
 			border-color:darken(@bg-light, 5%);
+		}
+
+		&[disabled] {
+			opacity: 0.5;
+
+			&:hover {
+				cursor: default;
+				background: @bg-light;
+				border-color: @bg-light;
+			}
 		}
 	}
 
@@ -73,6 +93,11 @@
 			top: -10px;
 			left: -12px;
 		}
+	}
+
+	&.is-small {
+		font-size: 14px;
+		padding: 0.57rem 1rem;
 	}
 }
 

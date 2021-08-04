@@ -9,11 +9,8 @@
 
 window.addEventListener("load", () => {
 	let items = document.querySelectorAll(".sidenav-collapse-item");
-	console.log(items);
 
 	items.forEach((item) => {
-		console.log(item);
-
 		item.addEventListener("click", () => {
 			if (item.classList.contains("is-active")) {
 				item.classList.remove("is-active");
@@ -37,11 +34,30 @@ window.addEventListener("load", () => {
 		sidebar.classList.remove("not-sidebar");
 	});
 
-	const filebutton = document.querySelector(".file");
-	let fileinput = filebutton.querySelector("label input[type=file]");
-	let filename = document.querySelector(".file input[type=text]");
-	
-	fileinput.addEventListener("change", () => {
-		filename.value = fileinput.files[0].name;
-	});
+	// Tabs
+	const myTabs = document.querySelectorAll(".tabs .tab-item");
+	myTabClicks = (tabClickEvent) => {
+		for (let i = 0; i < myTabs.length; i++) {
+			myTabs[i].classList.remove("is-active");
+		}
+
+		let clickedTab = tabClickEvent.currentTarget;
+		clickedTab.classList.add("is-active");
+		tabClickEvent.preventDefault();
+
+		// Tab content
+		let myContentPanes = document.querySelectorAll(".tab-pane");
+		for (let i = 0; i < myContentPanes.length; i++) {
+			myContentPanes[i].classList.remove("is-active");
+		}
+
+		let anchorReference = tabClickEvent.target;
+		let activePaneId = anchorReference.dataset.tab;
+		let activePane = document.getElementById(activePaneId);
+		activePane.classList.add("is-active");
+	};
+
+	for (let i = 0; i < myTabs.length; i++) {
+		myTabs[i].addEventListener("click", myTabClicks);
+	}
 });

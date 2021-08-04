@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Cix Customer Support | Facturas</title>
+    <title>Reportes - Crear Reportes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/assets/css/ccs.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.min.css">
@@ -73,7 +73,7 @@
 					<div class="sidenav-item-content">Dashboard</div>
 				</a>
 
-				<a href="/facturas/" class="sidenav-item is-active">
+				<a href="/facturas/" class="sidenav-item">
 					<i class="sidenav-item-icon fas fa-file-alt"></i>
 					<div class="sidenav-item-content">Facturas</div>
 					<span class="label">22</span>
@@ -130,7 +130,8 @@
 				</div>
 
 				<div class="heading">Soporte y Ayuda</div>
-				<div class="sidenav-collapse-item">
+
+				<div class="sidenav-collapse-item is-collapsible is-active">
 					<div class="sidenav-collapse-item-header">
 						<i class="sidenav-item-icon fas fa-exclamation-circle"></i>
 						<div class="sidenav-item-content">Reportes</div>
@@ -144,7 +145,7 @@
 							<span class="label is-info">5</span>
 						</a>
 
-						<a href="/reportes/crear-reportes/" class="sidenav-item">
+						<a href="/reportes/crear-reporte/" class="sidenav-item is-active">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Crear Reportes</div>
 						</a>
@@ -162,11 +163,11 @@
 		<main class="content">
 			<div class="container">
 				<div class="row is-margin-bottom-3">
-					<h1 class="display-1 is-margin-bottom-0">Facturas</h1>
+					<h1 class="display-1 is-margin-bottom-0">Crear Reportes</h1>
 					<nav class="breadcrumb">
 						<ul>
 							<li><a href="#">Inicio</a></li>
-							<li><a href="#">Facturas</a></li>
+							<li><a href="#">Crear Reportes</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -175,145 +176,59 @@
 					<section class="box">
 						<div class="columns columns-1">
 							<div class="row">
-								<h1 class="title text-uppercase">Lista de facturas</h1>
-								<p class="subtitle">En la siguiente lista puede llevar un control de las facturas
-								pagadas y las que aún están pendiente. Si posee varios servicios podrá cambiar entre
-								ellos para mostrar las facturas de cada uno de ellos.</p>
-							</div>
-
-							<div class="row j-start j-md-normal">
-								<label for="services">Servicios</label>
-								<select class="select">
-									<option value="0" data-name="Plutón">Internet r-20Mbps</option>
-								</select>
-							</div>
-
-							<div class="row responsive-table">
-								<table class="table">
-									<thead>
-										<tr>
-											<th>CÓDIGO</th>
-											<th>FECHA</th>
-											<th>CICLO</th>
-											<th>MONTO</th>
-											<th>PENDIENTE</th>
-											<th>DIVISA</th>
-											<th>ESTADO</th>
-										</tr>
-									</thead>
-
-									<tbody>
-										<tr>
-											<td>S-000912</td>
-											<td>08/06/2021</td>
-											<td>Junio</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td class="is-info"><i class="fas fa-undo icon"></i> Procesando</td>
-										</tr>
-
-										<tr>
-											<td>S-000913</td>
-											<td>08/06/2021</td>
-											<td>Mayo</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td class="is-info"><i class="fas fa-undo icon"></i> Procesando</td>
-										</tr>
-
-										<tr>
-											<td>S-000914</td>
-											<td>08/06/2021</td>
-											<td>Mayo</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-
-										<tr>
-											<td>S-000915</td>
-											<td>08/06/2021</td>
-											<td>Junio</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-
-										<tr>
-											<td>S-000916</td>
-											<td>08/06/2021</td>
-											<td>Abril</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-
-										<tr>
-											<td>S-000917</td>
-											<td>08/06/2021</td>
-											<td>Marzo</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td class="is-danger"><i class="fas fa-ellipsis-h icon"></i> Pendiente</td>
-										</tr>
-
-										<tr>
-											<td>S-000918</td>
-											<td>08/06/2021</td>
-											<td>Abril</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td class="is-danger"><i class="fas fa-ellipsis-h icon"></i> Pendiente</td>
-										</tr>
-
-										<tr>
-											<td>S-000919</td>
-											<td>08/06/2021</td>
-											<td>Febrero</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td class="is-danger"><i class="fas fa-ellipsis-h icon"></i> Pendiente</td>
-										</tr>
-
-										<tr>
-											<td>S-000920</td>
-											<td>08/06/2021</td>
-											<td>Febrero</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-
-										<tr>
-											<td>S-000913</td>
-											<td>08/06/2021</td>
-											<td>Enero</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td>$100.00</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-									</tbody>
-								</table>
+								<h1 class="title text-uppercase">Nuevo Reporte</h1>
+								<p class="subtitle">Rellene los formularios a continuación para crear su reporte.</p>
 							</div>
 
 							<div class="row">
-								<div class="pagination is-centered">
-									<button type="button" class="button">Anterior</button>
-									<button type="button" class="button is-active">1</button>
-									<button type="button" class="button">2</button>
-									<button type="button" class="button">3</button>
-									<button type="button" class="button">Siguiente</button>
-								</div>
+								<form class="form">
+									<div class="columns columns-2 columns-md-2 columns-sm-1">
+										<div class="field">
+											<label>Asunto</label>
+											<input type="text" placeholder="Ingrese un título del asunto">
+										</div>
+
+										<div class="field">
+											<label>Importancia</label>
+											<select>
+												<option value="0">Seleccione una opción</option>
+											</select>
+										</div>
+
+										<div class="field column-2 column-sm-1">
+											<label>Descripción</label>
+											<textarea placeholder="Diganos detalladamente su problema..."></textarea>
+										</div>
+									</div>
+
+									<div class="columns columns-2 columns-md-1">
+										<div class="field">
+											<label for="file">Adjuntar Archivo</label>
+											<div class="file">
+												<input type="text" disabled>
+												<label>
+													<i class="fas fa-file-medical"></i>
+													<span>Adjuntar</span>
+													<input type="file">
+												</label>
+											</div>
+										</div>
+
+										<div class="field">
+											<div class="d-flex j-between">
+												<label for="switch">Notificarme al correo cuando se apruebe el pago</label>
+												<label class="switch">
+													<input type="checkbox" id="switch">
+													<span class="slider round"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<div class="row j-end">
+								<button type="button" class="button is-primary">Enviar</button>
 							</div>
 						</div>
 					</section>
@@ -328,9 +243,11 @@
 				<a href="javascript:0;" class="button is-icon">
 					<i class="fab fa-facebook-f"></i>
 				</a>
+
 				<a href="javascript:0;" class="button is-icon">
 					<i class="fab fa-instagram"></i>
 				</a>
+
 				<a href="javascript:0;" class="button is-icon">
 					<i class="fab fa-twitter"></i>
 				</a>
@@ -338,6 +255,7 @@
 		</footer>
     </div>
 
-	<script type="text/javascript" src="/assets/js/ccs.js"></script>
+    <script type="text/javascript" src="/assets/js/ccs.js"></script>
+    <script type="text/javascript" src="/assets/js/modules/reportes/crear-reportes/main.js"></script>
 </body>
 </html>

@@ -145,11 +145,26 @@
 				</div>
 
 				<div class="heading">Soporte y Ayuda</div>
-				<a href="/reportes/" class="sidenav-item">
-					<i class="sidenav-item-icon fas fa-exclamation-circle"></i>
-					<div class="sidenav-item-content">Reportes</div>
-					<i class="fas fa-chevron-right"></i>
-				</a>
+				<div class="sidenav-collapse-item">
+					<div class="sidenav-collapse-item-header">
+						<i class="sidenav-item-icon fas fa-exclamation-circle"></i>
+						<div class="sidenav-item-content">Reportes</div>
+						<i class="fas fa-chevron-right"></i>
+					</div>
+
+					<div class="sidenav-collapse-item-body">
+						<a href="/reportes/mis-reportes/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Mis Reportes</div>
+							<span class="label is-info">5</span>
+						</a>
+
+						<a href="/reportes/crear-reportes/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Crear Reportes</div>
+						</a>
+					</div>
+				</div>
 
 				<a href="/support/" class="sidenav-item">
 					<i class="sidenav-item-icon fas fa-wrench"></i>
@@ -189,7 +204,7 @@
 								<h2 class="is-margin-bottom-1">$5,900.00</h2>
 
 								<p class="is-font-xs">
-									<a href="javascript:0;">22 <span class="is-color-grey-light">Facturas</span></a>
+									<a href="/facturas/">22 <span class="is-color-grey-light">Facturas</span></a>
 								</p>
 							</div>
 
@@ -207,7 +222,7 @@
 
 								<h2 class="is-margin-bottom-1">6</h2>
 
-								<a href="javascript:0;" class="is-font-xs">6/22</a>
+								<a href="/pagos/mis-pagos/" class="is-font-xs">6/22</a>
 							</div>
 
 							<div class="box">
@@ -224,7 +239,7 @@
 
 								<h2 class="is-margin-bottom-1">7</h2>
 
-								<a href="javascript:0;" class="is-font-xs">Ver mis reportes</a>
+								<a href="/reportes/mis-reportes/" class="is-font-xs">Ver mis reportes</a>
 							</div>
 						</section>
 
@@ -263,12 +278,18 @@
 
 											<div class="field">
 												<label>Desde</label>
-												<input type="text" placeholder="16/06/2021">
+												<div class="has-icon">
+													<input type="text" placeholder="16/06/2021">
+													<i class="fas fa-calendar-alt is-right"></i>
+												</div>
 											</div>
 
 											<div class="field">
 												<label>Hasta</label>
-												<input type="text" placeholder="16/06/2021">
+												<div class="has-icon">
+													<input type="text" placeholder="16/06/2021">
+													<i class="fas fa-calendar-alt is-right"></i>
+												</div>
 											</div>
 										</div>
 									</form>
