@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Asistencia Técnica - Asistencia Personalizada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/assets/css/ccs.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+		<header class="header">
+			<nav class="navbar">
+				<div class="navbar-start">
+					<button type="button" id="toggle-sidebar" class="button is-icon">
+						<i class="icon"></i>
+					</button>
+
+					<div class="searchbar">
+						<input type="text" class="input" placeholder="Buscar...">
+						<button type="button" class="button is-primary button-search"><i class="fas fa-search"></i>
+					</div>
+				</div>
+
+				<div class="navbar-logo">
+					<img src="/assets/images/logo-black.svg">
+	
+					<span class="title">
+						customer
+						<br>
+						support
+					</span>
+				</div>
+
+				<div class="navbar-end">
+					<div class="buttons">
+						<a href="javascript:0;" class="button is-icon">
+							<i class="far fa-bell"></i>
+							<span class="label is-floating">4</span>
+						</a>
+						<a href="javascript:0;" class="button is-icon">
+							<i class="far fa-comment-alt"></i>
+							<span class="label is-floating">6</span>
+						</a>
+					</div>
+
+					<button type="button" class="button is-icon menu">
+						<i class="fas fa-stream"></i>
+					</button>
+				</div>
+			</nav>
+		</header>
+
+		<aside class="sidebar">
+			<button type="button" id="close-sidebar" class="button is-icon is-transparent">
+				<i class="fas fa-chevron-left"></i>
+			</button>
+
+			<div class="sidebar-brand">
+				<img src="/assets/images/logo-white.svg">
+
+				<span class="title">
+					customer
+					<br>
+					support
+				</span>
+			</div>
+
+			<nav class="sidenav">
+				<div class="heading">Dashboard</div>
+				<a href="/" class="sidenav-item">
+					<i class="sidenav-item-icon fas fa-home"></i>
+					<div class="sidenav-item-content">Dashboard</div>
+				</a>
+
+				<a href="/facturas/" class="sidenav-item">
+					<i class="sidenav-item-icon fas fa-file-alt"></i>
+					<div class="sidenav-item-content">Facturas</div>
+					<span class="label">22</span>
+				</a>
+
+				<div class="sidenav-collapse-item">
+					<div class="sidenav-collapse-item-header">
+						<i class="sidenav-item-icon fas fa-money-check"></i>
+						<div class="sidenav-item-content">Pagos</div>
+						<i class="fas fa-chevron-right"></i>
+					</div>
+
+					<div class="sidenav-collapse-item-body">
+						<a href="/pagos/mis-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Mis pagos</div>
+						</a>
+
+						<a href="/pagos/reportar-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Reportar pagos</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="sidenav-collapse-item">
+					<div class="sidenav-collapse-item-header">
+						<i class="sidenav-item-icon fas fa-cog"></i>
+						<div class="sidenav-item-content">Servicios</div>
+						<i class="fas fa-chevron-right"></i>
+					</div>
+
+					<div class="sidenav-collapse-item-body">
+						<a href="/servicios/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Solicitar Nuevo</div>
+						</a>
+
+						<a href="/pagos/reportar-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Plan 20Mb-r</div>
+						</a>
+
+						<a href="/pagos/reportar-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Plan 50Mb-r</div>
+						</a>
+
+						<a href="/pagos/reportar-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Plan 100Mb-e</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="heading">Soporte y Ayuda</div>
+				<div class="sidenav-collapse-item">
+					<div class="sidenav-collapse-item-header">
+						<i class="sidenav-item-icon fas fa-exclamation-circle"></i>
+						<div class="sidenav-item-content">Reportes</div>
+						<i class="fas fa-chevron-right"></i>
+					</div>
+
+					<div class="sidenav-collapse-item-body">
+						<a href="/reportes/mis-reportes/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Mis Reportes</div>
+							<span class="label is-info">5</span>
+						</a>
+
+						<a href="/reportes/crear-reportes/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Crear Reportes</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="sidenav-collapse-item is-collapsible is-active">
+					<div class="sidenav-collapse-item-header">
+						<i class="sidenav-item-icon fas fa-wrench"></i>
+						<div class="sidenav-item-content">Asistencia Técnica</div>
+						<i class="fas fa-chevron-right"></i>
+					</div>
+
+					<div class="sidenav-collapse-item-body">
+						<a href="/asistencia-tecnica/asistencia-guiada/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Asistencia Guiada</div>
+						</a>
+
+						<a href="/asistencia-tecnica/asistencia-personalizada/" class="sidenav-item is-active">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Asistencia Personalizada</div>
+						</a>
+					</div>
+				</div>
+			</nav>
+		</aside>
+
+		<main class="content">
+			<div class="container">
+				<div class="row is-margin-bottom-3">
+					<h1 class="display-1 is-margin-bottom-0">Asistencia Personalizada</h1>
+					<nav class="breadcrumb">
+						<ul>
+							<li><a href="#">Inicio</a></li>
+							<li><a href="#">Asistencia Personalizada</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="box">
+					<div class="row">
+						<h1 class="title text-uppercase">Habla con un técnico</h1>
+						<p class="subtitle">
+							Con la asistencia personalizada podrás hablar directamente con un técnico de
+							CIX en caso de tener alguna pregunta o consulta por fallas o averias.
+						</p>
+					</div>
+				</div>
+
+				<div class="columns columns-3 columns-md-1">
+					<div class="column-2 column-md-1">
+						<div class="chat">
+							<div class="chat-head">
+								<div class="start">
+									<div class="avatar">
+										<img src="/assets/images/avatar.jpg">
+									</div>
+
+									<div class="info">
+										<span class="fullname">Víctor Díaz</span>
+
+										<span class="status">
+											<i class="fas fa-circle"></i>
+											en línea
+										</span>
+									</div>
+								</div>
+
+								<div class="end">
+									<span class="subtitle">Ticket <b>#3756</b></span>
+								</div>
+							</div>
+
+							<div class="chat-content">
+								<div class="date">
+									Hoy
+								</div>
+
+								<div class="message is-to">
+									<div class="text">
+										Hola buenos días, he estado teniendo lentitud e intermitencia
+										con el servicio de internet, esto me esta pasando desde ayer en la tarde,
+										pense que era algun tipo de mantenimiento de ustedes pero aun persiste el problema.
+									</div>
+								</div>
+
+								<div class="alert">
+									Debes esperar que un asistente te conteste
+								</div>
+
+								<div class="message is-from">
+									<div class="avatar">
+										<img src="/assets/images/avatar.jpg">
+									</div>
+
+									<div class="text">
+										Hola buenos días, Mi nombre es Víctor Díaz, quizas debas reiniciar
+										los equipos y comprobar que el cableado esta correctamente colocado,
+										comprueba y me cuentas que tal te fue.
+									</div>
+								</div>
+
+								<div class="message is-to">
+									<div class="text">
+										Esta bien, ya mismo reviso y reinicio los equipos.
+									</div>
+								</div>
+
+								<div class="message is-to">
+									<div class="text">
+										Listo, ya revise los cables y reinicie los equipos y creo que todo esta bien.
+									</div>
+								</div>
+
+								<div class="message is-from">
+									<div class="avatar">
+										<img src="/assets/images/avatar.jpg">
+									</div>
+
+									<div class="text">
+										Bien, revisa si ya tienes servicio por favor.
+									</div>
+								</div>
+							</div>
+
+							<div class="chat-foot">
+								<button type="button" class="button is-icon">
+									<i class="fas fa-paperclip"></i>
+								</button>
+
+								<input type="text" value="Sii ya tengo el servicio!. Muchas gracias por la aten" onfocus="this.selectionStart = this.selectionEnd = this.value.length;" autofocus="true">
+<!--
+								<textarea onfocus="this.selectionStart = this.selectionEnd = this.value.length;" autofocus="true">Sii ya tengo el servicio!. Muchas gracias por la aten</textarea>
+-->
+
+								<button type="button"  class="button is-icon">
+									<i class="fas fa-paper-plane"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="row content-discussions">
+						<button type="button" class="toggle-discussions">
+							<i class="fas fa-user-friends"></i>
+						</button>
+
+						<div class="discussions">
+							<div class="discussions-head">
+								<div class="searchbar">
+									<input type="text" class="input" placeholder="Buscar...">
+									<button type="button" class="button is-primary button-search"><i class="fas fa-search"></i>
+								</div>
+							</div>
+
+							<div class="alert">
+								Conversaciones Recientes
+							</div>
+
+							<a href="javascript:0;" class="discussions-item is-active">
+								<div class="avatar">
+									<img src="/assets/images/avatar.jpg">
+								</div>
+
+								<div class="sender">
+									<div class="start">
+										<span class="fullname">Víctor Díaz</span>
+										<span class="status">Ahora</span>
+									</div>
+
+									<div class="end">
+										<p class="text">Bien, revisa si ya tienes servicio por favor.</p>
+									</div>
+								</div>
+							</a>
+
+							<a href="javascript:0;" class="discussions-item">
+								<div class="avatar">
+									<img src="/assets/images/avatar.jpg">
+								</div>
+
+								<div class="sender">
+									<div class="start">
+										<span class="fullname">Marcel Guzman</span>
+										<span class="status">2 días</span>
+									</div>
+
+									<div class="end">
+										<p class="text">De nada amigo!! En CIX estamos para servirte y darte las mejores soluciones!.</p>
+									</div>
+								</div>
+							</a>
+
+							<a href="javascript:0;" class="discussions-item">
+								<div class="avatar">
+									<img src="/assets/images/avatar.jpg">
+								</div>
+
+								<div class="sender">
+									<div class="start">
+										<span class="fullname">Angel Zeron</span>
+										<span class="status">5 días</span>
+									</div>
+
+									<div class="end">
+										<p class="text">Excelente, espero puedas disfrutar del servicio!!!</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<p>Copyright © 2021 <a href="https://cixtelecom.net">CIX Telecom</a>. Designed by <a href="">Edwin</a>. All rights reserved</p>
+
+			<div class="social">
+				<a href="javascript:0;" class="button is-icon">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				<a href="javascript:0;" class="button is-icon">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="javascript:0;" class="button is-icon">
+					<i class="fab fa-twitter"></i>
+				</a>
+			</div>
+		</footer>
+    </div>
+
+	<script type="text/javascript" src="/assets/js/ccs.js"></script>
+	<script type="text/javascript" src="/assets/js/accordion.js"></script>
+	<script type="text/javascript" src="/assets/js/modules/asistencia-tecnica/asistencia-personalizada/main.js"></script>
+</body>
+</html>
