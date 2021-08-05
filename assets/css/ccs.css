@@ -179,9 +179,6 @@ h5,
 h6 {
   margin-top: 0;
 }
-ul {
-  list-style: none;
-}
 a {
   color: #E63C1F;
   cursor: pointer;
@@ -1538,14 +1535,16 @@ label + .select {
   align-items: center;
   background: #E63C1F;
   color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
   padding: 0.625rem 0.938rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.accordion-item .accordion-head i {
+.accordion-item .accordion-head .icon {
   font-size: 0.625rem;
   font-style: normal;
 }
-.accordion-item .accordion-head i::before {
+.accordion-item .accordion-head .icon::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f067";
@@ -1558,8 +1557,23 @@ label + .select {
 .accordion-item .accordion-content {
   display: none;
   padding: 1.25rem 0.938rem;
+  font-size: 13px;
   border-left: 1px solid #d7d7ff;
   border-right: 1px solid #d7d7ff;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+.accordion-item .accordion-content img {
+  width: 100%;
+}
+.accordion-item .accordion-content ul li {
+  margin-left: 0.938rem;
+}
+.accordion-item .accordion-content ul li ul {
+  margin-top: 10px;
+}
+.accordion-item .accordion-content ul li + li {
+  margin-top: 5px;
 }
 .accordion-item.is-active {
   border-bottom: none;
@@ -1577,7 +1591,16 @@ label + .select {
   content: "\f068";
 }
 .accordion-item.is-active .accordion-content {
-  display: block;
+  display: grid;
+  animation: fadeIn linear 0.2s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .section {
   padding: 1rem 1.5rem;
@@ -1615,6 +1638,7 @@ label + .select {
   grid-area: sidebar;
   background-color: #010032;
   background-image: linear-gradient(#010032, #160048);
+  animation: slideLeft 0.2s ease;
 }
 .wrapper .sidebar #close-sidebar {
   color: rgba(255, 255, 255, 0.2);
@@ -1663,6 +1687,9 @@ label + .select {
   display: flex;
   color: rgba(255, 255, 255, 0.2);
   padding: 15px 40px;
+}
+.wrapper .sidebar .sidenav-collapse-item-header i:last-child {
+  transition: all 0.2s ease-out;
 }
 .wrapper .sidebar .sidenav-collapse-item-header:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -1757,6 +1784,14 @@ label + .select {
 }
 .wrapper .footer .social a i.fab.fa-facebook-f {
   font-size: 18px;
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 .d-flex {
   display: flex;

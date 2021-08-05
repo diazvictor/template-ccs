@@ -31,11 +31,13 @@
 			align-items: center;
 			background: @bg-primary;
 			color: @white;
+			font-size: 14px;
+			font-weight: 700;
 			padding: 0.625rem 0.938rem;
 			transition: color .15s ease-in-out,background-color .15s ease-in-out,
 			border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
-			i {
+			.icon {
 				font-size: 0.625rem;
 				font-style: normal;
 
@@ -56,8 +58,30 @@
 		.accordion-content {
 			display: none;
 			padding: 1.25rem 0.938rem;
+			font-size: @font-size-subtitle;
 			border-left: 1px solid darken(@white-2, 5%);
 			border-right: 1px solid darken(@white-2, 5%);
+
+			grid-template-columns: 1fr;
+			grid-gap: 10px;
+
+			img {
+				width: 100%;
+			}
+
+			ul {
+				li {
+					margin-left: 0.938rem;
+
+					ul {
+						margin-top: 10px;
+					}
+
+					& + li {
+						margin-top: 5px;
+					}
+				}
+			}
 		}
 
 		&.is-active {
@@ -85,8 +109,19 @@
 			}
 
 			.accordion-content {
-				display: block;
+				display: grid;
+				animation: fadeIn linear .2s;
 			}
 		}
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
 	}
 }
