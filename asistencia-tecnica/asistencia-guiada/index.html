@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Pagos - Mis pagos</title>
+    <title>Asistencia Técnica - Asistencia Guiada</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/assets/css/ccs.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.min.css">
@@ -80,7 +79,7 @@
 					<span class="label">22</span>
 				</a>
 
-				<div class="sidenav-collapse-item is-collapsible is-active">
+				<div class="sidenav-collapse-item">
 					<div class="sidenav-collapse-item-header">
 						<i class="sidenav-item-icon fas fa-money-check"></i>
 						<div class="sidenav-item-content">Pagos</div>
@@ -88,7 +87,7 @@
 					</div>
 
 					<div class="sidenav-collapse-item-body">
-						<a href="/pagos/mis-pagos/" class="sidenav-item is-active">
+						<a href="/pagos/mis-pagos/" class="sidenav-item">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Mis pagos</div>
 						</a>
@@ -152,7 +151,7 @@
 					</div>
 				</div>
 
-				<div class="sidenav-collapse-item">
+				<div class="sidenav-collapse-item is-collapsible is-active">
 					<div class="sidenav-collapse-item-header">
 						<i class="sidenav-item-icon fas fa-wrench"></i>
 						<div class="sidenav-item-content">Asistencia Técnica</div>
@@ -160,7 +159,7 @@
 					</div>
 
 					<div class="sidenav-collapse-item-body">
-						<a href="/asistencia-tecnica/asistencia-guiada/" class="sidenav-item">
+						<a href="/asistencia-tecnica/asistencia-guiada/" class="sidenav-item is-active">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Asistencia Guiada</div>
 						</a>
@@ -177,143 +176,75 @@
 		<main class="content">
 			<div class="container">
 				<div class="row is-margin-bottom-3">
-					<h1 class="display-1 is-margin-bottom-0">Mis pagos</h1>
+					<h1 class="display-1 is-margin-bottom-0">Asistencia Guiada</h1>
 					<nav class="breadcrumb">
 						<ul>
 							<li><a href="#">Inicio</a></li>
-							<li><a href="#">Mis pagos</a></li>
+							<li><a href="#">Asistencia Guiada</a></li>
 						</ul>
 					</nav>
 				</div>
 
-				<div class="box is-grouped">
-					<section class="box">
-						<div class="columns columns-1">
-							<div class="row">
-								<h1 class="title text-uppercase">Lista de facturas</h1>
-								<p class="subtitle">En la siguiente lista puede llevar un control de las facturas
-								pagadas y las que aún están pendiente. Si posee varios servicios podrá cambiar entre 
-								ellos para mostrar las facturas de cada uno de ellos.</p>
-							</div>
+				<div class="box">
+					<div class="columns columns-1">
+						<div class="row">
+							<h1 class="title text-uppercase">Manual de uso de cix customer support</h1>
+							<p class="subtitle">
+								Con <b>Cix Customer Support</b> usted puede verificar sus facturas pendientes
+								y pagadas, también puede verificar y reportar pagos, verificar el estatus de
+								sus servicios contratados así como también reportar problemas con sus servicios.
+								Ademas, tendra a la mano una serie de herramientas que podra consultar en caso de
+								fallas o averias, e información de su ubicación y calidad de señal recibida.
+							</p>
+						</div>
 
-							<div class="row j-start j-md-normal">
-								<label for="services">Servicios</label>
-								<select class="select">
-									<option value="0">Internet r-20Mbps</option>
-								</select>
-							</div>
+						<div class="row">
+							<div class="accordion">
+								<div class="accordion-item is-active">
+									<div class="accordion-head">
+										<span>Item #1</span>
+										<i></i>
+									</div>
 
-							<div class="row responsive-table">
-								<table class="table">
-									<thead>
-										<tr>
-											<th>CÓDIGO</th>
-											<th>FECHA</th>
-											<th>REFERENCIA</th>
-											<th>BANCO</th>
-											<th>MONTO</th>
-											<th>ESTADO</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr class="primary">
-											<td>S-000912</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Venezuela</td>
-											<td>160.000.000</td>
-											<td class="is-info"><i class="fas fa-undo icon"></i> Procesando</td>
-										</tr>
-										<tr>
-											<td>S-000913</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Banesco</td>
-											<td>160.000.000</td>
-											<td class="is-info"><i class="fas fa-undo icon"></i> Procesando</td>
-										</tr>
-										<tr>
-											<td>S-000914</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Provincial</td>
-											<td>160.000.000</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-										<tr>
-											<td>S-000915</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Venezuela</td>
-											<td>160.000.000</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-										<tr>
-											<td>S-000916</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Venezuela</td>
-											<td>160.000.000</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-										<tr>
-											<td>S-000917</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Venezuela</td>
-											<td>160.000.000</td>
-											<td class="is-danger"><i class="fas fa-ellipsis-h icon"></i> Pendiente</td>
-										</tr>
-										<tr>
-											<td>S-000918</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Venezuela</td>
-											<td>160.000.000</td>
-											<td class="is-danger"><i class="fas fa-ellipsis-h icon"></i> Pendiente</td>
-										</tr>
-										<tr>
-											<td>S-000919</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Banesco</td>
-											<td>160.000.000</td>
-											<td class="is-danger"><i class="fas fa-ellipsis-h icon"></i> Pendiente</td>
-										</tr>
-										<tr>
-											<td>S-000920</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Banesco</td>
-											<td>160.000.000</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-										<tr>
-											<td>S-000921</td>
-											<td>08/06/2021</td>
-											<td>81436518</td>
-											<td>Provincial</td>
-											<td>160.000.000</td>
-											<td class="is-success"><i class="fas fa-check icon"></i> Completado</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="row">
-								<div class="pagination is-centered">
-									<button type="button" class="button">Anterior</button>
-									<button type="button" class="button is-active">1</button>
-									<button type="button" class="button">2</button>
-									<button type="button" class="button">3</button>
-									<button type="button" class="button">Siguiente</button>
+									<div class="accordion-content">
+										<p>
+											Contenido #1
+										</p>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<div class="accordion-head">
+										<span>Item #2</span>
+										<i></i>
+									</div>
+
+									<div class="accordion-content">
+										<p>
+											Contenido #2
+										</p>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<div class="accordion-head">
+										<span>Item #3</span>
+										<i></i>
+									</div>
+
+									<div class="accordion-content">
+										<p>
+											Contenido #3
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
-					</section>
+					</div>
 				</div>
 			</div>
 		</main>
-		
+
 		<footer class="footer">
 			<p>Copyright © 2021 <a href="https://cixtelecom.net">CIX Telecom</a>. Designed by <a href="">Edwin</a>. All rights reserved</p>
 
@@ -332,5 +263,6 @@
     </div>
 
 	<script type="text/javascript" src="/assets/js/ccs.js"></script>
+	<script type="text/javascript" src="/assets/js/accordion.js"></script>
 </body>
 </html>

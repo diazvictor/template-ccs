@@ -1521,6 +1521,64 @@ label + .select {
 .tabs + .tab-content .tab-pane.is-active {
   display: block;
 }
+.accordion-item {
+  border-bottom: 1px solid #FFFFFF;
+}
+.accordion-item:first-child .accordion-head {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.accordion-item:last-child .accordion-head {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.accordion-item .accordion-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #E63C1F;
+  color: #FFFFFF;
+  padding: 0.625rem 0.938rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.accordion-item .accordion-head i {
+  font-size: 0.625rem;
+  font-style: normal;
+}
+.accordion-item .accordion-head i::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f067";
+}
+.accordion-item .accordion-head:hover {
+  background: #d43318;
+  border-color: #d43318;
+  cursor: pointer;
+}
+.accordion-item .accordion-content {
+  display: none;
+  padding: 1.25rem 0.938rem;
+  border-left: 1px solid #d7d7ff;
+  border-right: 1px solid #d7d7ff;
+}
+.accordion-item.is-active {
+  border-bottom: none;
+}
+.accordion-item.is-active:last-child .accordion-head {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.accordion-item.is-active:last-child .accordion-content {
+  border-bottom: 1px solid #d7d7ff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.accordion-item.is-active .accordion-head i::before {
+  content: "\f068";
+}
+.accordion-item.is-active .accordion-content {
+  display: block;
+}
 .section {
   padding: 1rem 1.5rem;
 }
@@ -1529,7 +1587,7 @@ label + .select {
   grid-template-columns: 1fr 4fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "sidebar header" "sidebar content" "sidebar footer";
-  min-height: 900px;
+  min-height: 120vh;
   overflow-x: hidden;
 }
 @media screen and (max-width: 1024px) {
