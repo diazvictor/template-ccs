@@ -8,6 +8,16 @@
  */
 
 window.addEventListener("load", () => {
+	let dropdowns = document.querySelectorAll(".dropdown");
+	dropdowns.forEach((dropdown) => {
+		let dropdownBtn = dropdown.querySelector(".dropdown-toggle");
+		let dropdownMenu = dropdown.querySelector(".dropdown-menu");
+
+		dropdownBtn.addEventListener("click", () => {
+			dropdownMenu.classList.toggle("is-active");
+		});
+	});
+
 	let items = document.querySelectorAll(".sidenav-collapse-item");
 
 	items.forEach((item) => {
