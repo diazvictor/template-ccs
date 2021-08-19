@@ -31,17 +31,31 @@ window.addEventListener("load", () => {
 	});
 
 	let sidebar = document.querySelector(".wrapper");
+	const body = document.querySelector("body");
+	let overlay = document.querySelector("#overlay-bg");
 	let toggleSidebar = document.getElementById("toggle-sidebar");
 	let closeSidebar = document.getElementById("close-sidebar");
 
+	let = collapseSidebar = () => {
+		sidebar.classList.remove("not-sidebar");
+		body.classList.remove("not-scroll-y");
+		overlay.classList.remove("is-active");
+	};
+
 	toggleSidebar.addEventListener("click", () => {
 		sidebar.classList.toggle("not-sidebar");
+		body.classList.add("not-scroll-y");
+		overlay.classList.add("is-active");
 
 		toggleSidebar.classList.toggle("is-active");
 	});
 
+	overlay.addEventListener("click", () => {
+		collapseSidebar();
+	});
+
 	closeSidebar.addEventListener("click", () => {
-		sidebar.classList.remove("not-sidebar");
+		collapseSidebar();
 	});
 
 	// Tabs
