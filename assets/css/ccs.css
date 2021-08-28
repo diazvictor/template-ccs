@@ -1333,8 +1333,13 @@ label + .select {
   padding: 0 0.75rem;
 }
 .navbar #toggle-sidebar i {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-style: normal;
+}
+@media screen and (max-width: 425px) {
+  .navbar #toggle-sidebar i {
+    font-size: 1.25rem;
+  }
 }
 .navbar #toggle-sidebar i::before {
   font-family: "Font Awesome 5 Free";
@@ -1346,8 +1351,18 @@ label + .select {
     content: "\f054";
   }
 }
+@media screen and (max-width: 425px) {
+  .navbar #toggle-sidebar i::before {
+    content: "\f0c9";
+  }
+}
 .navbar #toggle-sidebar.is-active i::before {
   content: "\f054";
+}
+@media screen and (max-width: 425px) {
+  .navbar #toggle-sidebar.is-active i::before {
+    content: "\f0c9";
+  }
 }
 .navbar-logo {
   display: none;
@@ -1685,19 +1700,23 @@ label + .select {
 .section {
   padding: 1rem 1.5rem;
 }
-body.not-scroll-y {
-  overflow-y: hidden;
+@media screen and (max-width: 1024px) {
+  body.not-scroll-y {
+    overflow-y: hidden;
+  }
 }
-#overlay-bg {
-  display: none;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  height: 100vh;
-  z-index: 2000;
-}
-#overlay-bg.is-active {
-  display: block;
+@media screen and (max-width: 1024px) {
+  #overlay-bg {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100vh;
+    z-index: 2000;
+  }
+  #overlay-bg.is-active {
+    display: block;
+  }
 }
 .wrapper {
   display: grid;
@@ -1736,10 +1755,12 @@ body.not-scroll-y {
   animation: slideLeft 0.2s ease;
 }
 .wrapper .sidebar #close-sidebar {
-  color: rgba(255, 255, 255, 0.4);
-  position: absolute;
-  top: 40px;
-  right: 15px;
+  display: none;
+}
+@media screen and (max-width: 425px) {
+  .wrapper .sidebar #close-sidebar i::before {
+    content: "\f00d";
+  }
 }
 @media screen and (max-width: 1024px) {
   .wrapper .sidebar {
@@ -1748,6 +1769,13 @@ body.not-scroll-y {
     overflow-y: auto;
     height: 100vh;
     z-index: 99999;
+  }
+  .wrapper .sidebar #close-sidebar {
+    display: block;
+    color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 40px;
+    right: 15px;
   }
 }
 .wrapper .sidebar-brand {

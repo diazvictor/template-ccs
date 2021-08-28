@@ -11,10 +11,14 @@
 
 .navbar {
 	background-color: @white;
-	padding: 0.75rem;
+	padding: 0.75rem 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	.dropdown {
+		z-index: 6;
+	}
 
 	.menu {
 		display: none
@@ -25,11 +29,17 @@
 	}
 
 	#toggle-sidebar {
-		margin-right: 0.75rem;
+		padding: 0 0.75rem;
 
 		i {
 			font-size: 1rem;
 			font-style: normal;
+
+			@media screen and (max-width: @breakpoints[small]) {
+				& {
+					font-size: 1.25rem;
+				}
+			}
 
 			&::before {
 				font-family: "Font Awesome 5 Free";
@@ -42,6 +52,11 @@
 					}
 				}
 
+				@media screen and (max-width: @breakpoints[small]) {
+					& {
+						content: "\f0c9";
+					}
+				}
 			}
 		}
 
@@ -49,6 +64,12 @@
 			i {
 				&::before {
 					content: "\f054";
+
+					@media screen and (max-width: @breakpoints[small]) {
+						& {
+							content: "\f0c9";
+						}
+					}
 				}
 			}
 		}
@@ -90,6 +111,9 @@
 		grid-template-columns: auto;
 	}
 
+	&-end {
+		padding-right: 0.75rem;
+	}
 	@media screen and (max-width: 458px) {
 		&-end {
 			.buttons {

@@ -8,21 +8,25 @@
 // lessc wrapper.less > wrapper.css
 
 body {
-	&.not-scroll-y {
-		overflow-y: hidden;
+	@media screen and (max-width: @breakpoints[large]) {
+		&.not-scroll-y {
+			overflow-y: hidden;
+		}
 	}
 }
 
-#overlay-bg {
-	display: none;
-	position: fixed;
-	background: rgba(0, 0, 0, 0.4);
-	width: 100%;
-	height: 100vh;
-	z-index: 2000;
+@media screen and (max-width: @breakpoints[large]) {
+	#overlay-bg {
+		display: none;
+		position: fixed;
+		background: rgba(0, 0, 0, 0.4);
+		width: 100%;
+		height: 100vh;
+		z-index: 2000;
 
-	&.is-active {
-		display: block;
+		&.is-active {
+			display: block;
+		}
 	}
 }
 
@@ -76,13 +80,28 @@ body {
 		animation: slideLeft .2s ease;
 
 		#close-sidebar {
-			color: rgba(255, 255, 255, 0.2);
-			position: absolute;
-			top: 40px;
-			right: 15px;
+			display: none;
+		}
+
+		@media screen and (max-width: @breakpoints[small]) {
+			#close-sidebar {
+				i {
+					&::before {
+						content: "\f00d"
+					}
+				}
+			}
 		}
 
 		@media screen and (max-width: @breakpoints[large]) {
+			#close-sidebar {
+				display: block;
+				color: rgba(255, 255, 255, 0.4);
+				position: absolute;
+				top: 40px;
+				right: 15px;
+			}
+
 			& {
 				display: none;
 				position: fixed;
@@ -114,12 +133,12 @@ body {
 		}
 
 		.sidenav {
-			margin-bottom: 40px;
+			margin-bottom: 60px;
 			border-top: 1px solid rgba(255, 255, 255, 0.2);
 
 			.heading {
 				margin: 40px 0 20px 40px;
-				color: rgba(255, 255, 255, 0.2);
+				color: rgba(255, 255, 255, 0.4);
 				font-weight: 800;
 				text-transform: uppercase;
 			}
@@ -128,7 +147,7 @@ body {
 				&-header {
 					cursor: pointer;
 					display: flex;
-					color: rgba(255, 255, 255, 0.2);
+					color: rgba(255, 255, 255, 0.4);
 					padding: 15px 40px;
 
 					i:last-child {
@@ -187,7 +206,7 @@ body {
 			&-item {
 				cursor: pointer;
 				display: flex;
-				color: rgba(255, 255, 255, 0.2);
+				color: rgba(255, 255, 255, 0.4);
 				padding: 15px 40px;
 
 				&-icon {
