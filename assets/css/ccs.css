@@ -1495,6 +1495,10 @@ label + .select {
   border-color: #F0F0FF;
   color: rgba(0, 0, 0, 0.4);
 }
+.tabs .tab-item i,
+.tabs .tab-item .label {
+  pointer-events: none;
+}
 .tabs .tab-item:focus {
   box-shadow: 0 0 0 0.2rem rgba(215, 215, 255, 0.4);
 }
