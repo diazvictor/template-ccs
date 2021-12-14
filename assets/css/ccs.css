@@ -1320,6 +1320,14 @@ label + .select {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 460px) {
+  .navbar {
+    position: fixed;
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 1999;
+  }
+}
 .navbar .dropdown {
   z-index: 6;
 }
@@ -1752,7 +1760,11 @@ label + .select {
   width: 18rem;
   background-color: #010032;
   background-image: linear-gradient(#010032, #160048);
-  animation: slideLeft 0.2s ease;
+  transform: translateX(0%);
+  transition: all 0.2s ease-out;
+}
+.wrapper .sidebar.is-close {
+  transform: translateX(-100%);
 }
 .wrapper .sidebar #close-sidebar {
   display: none;
@@ -1769,13 +1781,6 @@ label + .select {
     overflow-y: auto;
     height: 100vh;
     z-index: 99999;
-  }
-  .wrapper .sidebar #close-sidebar {
-    display: block;
-    color: rgba(255, 255, 255, 0.4);
-    position: absolute;
-    top: 40px;
-    right: 15px;
   }
 }
 .wrapper .sidebar-brand {
@@ -1869,6 +1874,11 @@ label + .select {
   margin-top: 30px;
   margin-bottom: 30px;
   grid-area: content;
+}
+@media screen and (max-width: 460px) {
+  .wrapper > .content {
+    margin-top: 95px;
+  }
 }
 .wrapper > .footer {
   grid-area: footer;
@@ -2069,16 +2079,6 @@ label + .select {
 }
 .is-font-medium {
   font-size: 20px;
-}
-@media screen and (max-width: 768px) {
-  .is-hidden-md {
-    display: none;
-  }
-}
-@media screen and (max-width: 425px) {
-  .is-hidden-sm {
-    display: none;
-  }
 }
 .info .box {
   display: flex;

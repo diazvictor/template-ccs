@@ -8,56 +8,6 @@
  */
 
 window.addEventListener("load", () => {
-	let dropdowns = document.querySelectorAll(".dropdown");
-	dropdowns.forEach((dropdown) => {
-		let dropdownBtn = dropdown.querySelector(".dropdown-toggle");
-		let dropdownMenu = dropdown.querySelector(".dropdown-menu");
-
-		dropdownBtn.addEventListener("click", () => {
-			dropdownMenu.classList.toggle("is-active");
-		});
-	});
-
-	let items = document.querySelectorAll(".sidenav-collapse-item");
-
-	items.forEach((item) => {
-		item.addEventListener("click", () => {
-			if (item.classList.contains("is-active")) {
-				item.classList.remove("is-active");
-			}
-
-			item.classList.toggle("is-collapsible");
-		});
-	});
-
-	let sidebar = document.querySelector(".wrapper");
-	const body = document.querySelector("body");
-	let overlay = document.querySelector("#overlay-bg");
-	let toggleSidebar = document.getElementById("toggle-sidebar");
-	let closeSidebar = document.getElementById("close-sidebar");
-
-	let = collapseSidebar = () => {
-		sidebar.classList.remove("not-sidebar");
-		body.classList.remove("not-scroll-y");
-		overlay.classList.remove("is-active");
-	};
-
-	toggleSidebar.addEventListener("click", () => {
-		sidebar.classList.toggle("not-sidebar");
-		body.classList.add("not-scroll-y");
-		overlay.classList.add("is-active");
-
-		toggleSidebar.classList.toggle("is-active");
-	});
-
-	overlay.addEventListener("click", () => {
-		collapseSidebar();
-	});
-
-	closeSidebar.addEventListener("click", () => {
-		collapseSidebar();
-	});
-
 	// Tabs
 	const myTabs = document.querySelectorAll(".tabs .tab-item");
 	myTabClicks = (tabClickEvent) => {
