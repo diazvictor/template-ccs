@@ -1730,8 +1730,353 @@ label + .select {
   min-height: 120vh;
   overflow-x: hidden;
 }
+.wrapper.login {
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "content login" "content login" "footer footer";
+}
+.wrapper.login.pass_recovery {
+  grid-template-columns: 1fr;
+}
+.wrapper.login.pass_recovery .content .box {
+  width: 550px;
+  background-color: #020033;
+  background-image: linear-gradient(#000030, #170049);
+  background-size: cover;
+  left: 0;
+  right: 0;
+}
+.wrapper.login.pass_recovery .content .box h1 {
+  color: #FFFFFF;
+}
+.wrapper.login.pass_recovery .content .box p {
+  color: #FFFFFF;
+  border: none;
+}
+.wrapper.login.pass_recovery .content .box form {
+  width: 70%;
+  border-top: 1px solid #cbcdcf;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+.wrapper.login.pass_recovery .content .box form .field {
+  margin-bottom: 10px;
+}
+.wrapper.login.pass_recovery .content .box form .field .has-icon {
+  position: relative;
+}
+.wrapper.login.pass_recovery .content .box form .field .has-icon input {
+  padding-left: 2rem;
+  max-width: 100%;
+  width: 100%;
+}
+.wrapper.login.pass_recovery .content .box form .field .has-icon .is-left {
+  position: absolute;
+  left: 0;
+  padding: 0.688rem;
+  font-size: 0.875rem;
+  color: #95999f;
+}
+.wrapper.login.pass_recovery .content .box form input {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.wrapper.login.pass_recovery .content .box form input::placeholder {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.wrapper.login.pass_recovery .content .box form button {
+  margin-bottom: 20px;
+}
+.wrapper.login.pass_recovery .content .box form button:focus {
+  box-shadow: none;
+}
+.wrapper.login.pass_recovery .content .box form a {
+  display: flex;
+  color: #FFFFFF;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper.login.pass_recovery .content .box form a i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+@media screen and (max-width: 998px) {
+  .wrapper.login.pass_recovery {
+    grid-template-areas: "content" "footer";
+  }
+  .wrapper.login.pass_recovery .content {
+    display: block;
+  }
+}
+@media screen and (max-width: 615px) {
+  .wrapper.login.pass_recovery .content .banner .rocket-astronaut {
+    left: 0px;
+    top: -70px;
+  }
+  .wrapper.login.pass_recovery .content .banner .rocket-astronaut img {
+    width: 120%;
+    height: 1284px;
+  }
+  .wrapper.login.pass_recovery .content .box {
+    width: 80%;
+  }
+  .wrapper.login.pass_recovery .content .foot {
+    display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .wrapper.login.pass_recovery .content .box {
+    width: 80%;
+  }
+  .wrapper.login.pass_recovery .content .box form {
+    width: 100%;
+  }
+}
+.wrapper.login .content {
+  position: relative;
+  background-color: #020033;
+  background-image: url("/assets/images/404/background.svg");
+  background-size: cover;
+  grid-area: content;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.wrapper.login .content .bg .planet-1,
+.wrapper.login .content .bg .planet-2 {
+  position: absolute;
+  mix-blend-mode: screen;
+}
+.wrapper.login .content .bg .planet-2 {
+  top: 0;
+  right: 0;
+}
+.wrapper.login .content .bg .glow-stars {
+  position: absolute;
+  mix-blend-mode: screen;
+  left: -300px;
+}
+.wrapper.login .content .banner {
+  position: relative;
+}
+.wrapper.login .content .banner .rocket-astronaut {
+  position: relative;
+  left: 250px;
+}
+.wrapper.login .content .box {
+  position: absolute;
+  top: 300px;
+  left: 25%;
+  width: 60%;
+  border: none;
+  border-radius: 15px;
+  padding: 60px 20px 20px 20px;
+  margin: 0 auto;
+}
+.wrapper.login .content .box h1 {
+  color: #E63C1F;
+  text-align: center;
+  font-weight: 400;
+  font-size: 50px;
+}
+.wrapper.login .content .box h1 + p {
+  color: #4A4D51;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cbcdcf;
+  margin-bottom: 20px;
+}
+.wrapper.login .content .box .item {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+}
+.wrapper.login .content .box .item p {
+  color: #4A4D51;
+  flex-grow: 1;
+  margin-left: 10px;
+  font-weight: 400;
+}
+.wrapper.login .content .box .item + .item {
+  margin-top: 60px;
+}
+.wrapper.login .content .box > svg {
+  display: block;
+  margin: 20px 0 0 auto;
+}
+.wrapper.login .content .foot {
+  padding: 12px;
+}
+.wrapper.login .content .foot a {
+  font-size: 14px;
+  color: #95999f;
+}
+.wrapper.login .content .foot a:nth-child(2)::before,
+.wrapper.login .content .foot a:nth-child(2)::after {
+  content: "|";
+  padding: 0 10px;
+}
+.wrapper.login .login {
+  position: relative;
+  z-index: 2;
+  grid-area: login;
+  background-color: #010032;
+  background-image: linear-gradient(#010032, #160048);
+  padding: 40px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.wrapper.login .login > svg {
+  display: block;
+  margin: 50px auto 150px auto;
+}
+.wrapper.login .login > svg + img {
+  display: none;
+}
+.wrapper.login .login form {
+  display: grid;
+  grid-gap: 10px;
+}
+.wrapper.login .login form .field {
+  display: none;
+}
+.wrapper.login .login form input {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.wrapper.login .login form input::placeholder {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.wrapper.login .login form button {
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: #E63C1F;
+  border: none;
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 10px;
+}
+.wrapper.login .login form button:hover {
+  cursor: pointer;
+  background: #cf3217;
+  border-color: #cf3217;
+}
+.wrapper.login .login form button i {
+  display: none;
+}
+.wrapper.login .login form a {
+  color: #FFFFFF;
+  font-size: 12px;
+  text-align: center;
+}
+.wrapper.login .login form .buttons {
+  display: none;
+}
+@media screen and (max-width: 1246px) {
+  .wrapper.login .content .banner .rocket-astronaut {
+    position: relative;
+    left: 250px;
+  }
+  .wrapper.login .content .banner .rocket-astronaut img {
+    width: 100%;
+    height: 1284px;
+  }
+}
+@media screen and (max-width: 998px) {
+  .wrapper.login {
+    grid-template-columns: 1fr;
+    grid-template-areas: "login" "login" "footer";
+  }
+  .wrapper.login .content {
+    display: none;
+  }
+  .wrapper.login .login {
+    padding: 40px;
+  }
+  .wrapper.login .login > svg {
+    margin: 50px auto 20px auto;
+  }
+  .wrapper.login .login > svg + img {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .wrapper.login .login form {
+    display: grid;
+    grid-gap: 10px;
+  }
+  .wrapper.login .login form > input {
+    display: none;
+  }
+  .wrapper.login .login form .field {
+    display: block;
+  }
+  .wrapper.login .login form .field .has-icon {
+    position: relative;
+  }
+  .wrapper.login .login form .field .has-icon input {
+    padding-left: 2rem;
+    max-width: 100%;
+    width: 100%;
+  }
+  .wrapper.login .login form .field .has-icon .is-left {
+    position: absolute;
+    left: 0;
+    padding: 0.688rem;
+    font-size: 0.875rem;
+    color: #95999f;
+  }
+  .wrapper.login .login form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper.login .login form button i {
+    display: block;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  .wrapper.login .login form .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wrapper.login .login form .buttons a {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 0px;
+  }
+  .wrapper.login .login form .buttons a svg {
+    display: block;
+    margin: 0 auto 10px auto;
+  }
+  .wrapper.login .login form a {
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .wrapper.login .login form a i {
+    display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .wrapper.login .login svg + img {
+    width: 100%;
+  }
+  .wrapper.login .login form {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1024px) {
-  .wrapper {
+  .wrapper:not(.login) {
     grid-template-columns: 1fr;
     grid-template-areas: "header" "content" "footer";
   }
