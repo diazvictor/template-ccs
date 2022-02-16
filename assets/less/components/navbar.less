@@ -16,6 +16,15 @@
 	justify-content: space-between;
 	align-items: center;
 
+	@media screen and (max-width: 460px) {
+		& {
+			position: fixed;
+			width: 100%;
+			transition: top 0.3s;
+			z-index: 1999;
+		}
+	}
+
 	.dropdown {
 		z-index: 6;
 	}

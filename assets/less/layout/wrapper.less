@@ -49,6 +49,8 @@ body {
 		}
 	}
 
+	// TODO: Añadir la animación de slider left to right
+	// Para ello corregir las clases para mostrar el sidebar
 	&.not-sidebar {
 		grid-template-columns: 1fr;
 		grid-template-areas: "header"
@@ -77,7 +79,12 @@ body {
 		width: 18rem;
 		background-color: @gradient[primary];
 		background-image: linear-gradient(@gradient[primary], @gradient[secondary]);
-		animation: slideLeft .2s ease;
+		transform: translateX(0%);
+		transition: all 0.2s ease-out;
+
+		&.is-close {
+			transform: translateX(-100%);			
+		}
 
 		#close-sidebar {
 			display: none;
@@ -94,13 +101,13 @@ body {
 		}
 
 		@media screen and (max-width: @breakpoints[large]) {
-			#close-sidebar {
-				display: block;
-				color: rgba(255, 255, 255, 0.4);
-				position: absolute;
-				top: 40px;
-				right: 15px;
-			}
+			// #close-sidebar {
+				// display: block;
+				// color: rgba(255, 255, 255, 0.4);
+				// position: absolute;
+				// top: 40px;
+				// right: 15px;
+			// }
 
 			& {
 				display: none;
@@ -237,6 +244,12 @@ body {
 		margin-top: 30px;
 		margin-bottom: 30px;
 		grid-area: content;
+
+		@media screen and (max-width: 460px) {
+			& {
+				margin-top: 95px;
+			}
+		}
 	}
 
 	> .footer {
