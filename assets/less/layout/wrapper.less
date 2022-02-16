@@ -40,8 +40,460 @@ body {
 	min-height: 120vh;
 	overflow-x: hidden;
 
+	&.login {
+		grid-template-columns: 3fr 1fr;
+		grid-template-areas: "content login"
+						 "content login"
+						 "footer footer";
+
+		&.pass_recovery {
+			grid-template-columns: 1fr;
+
+			.content {
+				.box {
+					width: 550px;
+					background-color: #020033;
+					background-image: linear-gradient(#000030, #170049);
+					background-size: cover;
+					left: 0;
+					right: 0;
+
+
+					h1 {
+						color: @white;
+					}
+
+					p {
+						color: @white;
+						border: none;
+					}
+
+					form {
+						width: 70%;
+						border-top: 1px solid #cbcdcf;
+						padding-top: 20px;
+						margin: 0 auto;
+
+						.field {
+							margin-bottom: 10px;
+
+							.has-icon {
+								position: relative;
+			
+								input {
+									padding-left: 2rem;
+									max-width: 100%;
+									width: 100%;
+								}
+			
+								.is-left {
+									position: absolute;
+									left: 0;
+									padding: 0.688rem;
+									font-size: 0.875rem;
+									color: @border-focus;
+								}
+							}
+						}
+
+						input {
+							background: @white;
+							border: none;
+							border-radius: 5px;
+							padding: 10px 15px;
+
+							&::placeholder {
+								font-size: 0.875rem;
+								font-weight: 400;
+							}
+						}
+
+						button {
+							margin-bottom: 20px;
+
+							&:focus {
+								box-shadow: none;
+							}
+						}
+
+						a {
+							display: flex;
+							color: @white;
+							font-size: 12px;
+							align-items: center;
+							justify-content: center;
+
+							i {
+								font-size: 20px;
+								margin-right: 10px;
+							}
+						}
+					}
+				}
+			}
+
+			@media screen and (max-width: 998px) {
+				& {
+					grid-template-areas: "content"
+										 "footer";
+					.content {
+						display: block;
+					}
+				}
+			}
+
+			@media screen and (max-width: 615px) {
+				& {
+					.content {
+						.banner {
+							.rocket-astronaut {
+								left: 0px;
+								top: -70px;
+
+								img {
+									width: 120%;
+									height: 1284px;
+								}
+							}
+						}
+
+						.box {
+							width: 80%;
+						}
+
+						.foot {display: none}
+					}
+				}
+			}
+
+			@media screen and (max-width: 425px) {
+				& {
+					.content {
+						.box {
+							width: 80%;
+
+							form {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.content {
+			position: relative;
+			background-color: #020033;
+			background-image: url("/assets/images/404/background.svg");
+			background-size: cover;
+			grid-area: content;
+			// display: flex;
+			// align-items: center;
+			// justify-content: center;
+			margin-top: 0;
+			margin-bottom: 0;
+
+			.bg {
+				.planet {
+					&-1, &-2 {
+						position: absolute;
+						mix-blend-mode: screen;
+					}
+
+					&-1 {
+					}
+
+					&-2 {
+						top: 0;
+						right: 0;
+					}
+				}
+
+				.glow-stars {
+					position: absolute;
+					mix-blend-mode: screen;
+					left: -300px;
+				}
+			}
+
+			.banner {
+				position: relative;
+
+				.rocket-astronaut {
+					position: relative;
+					left: 250px;
+				}
+			}
+
+			.box {
+				position: absolute;
+				top: 300px;
+				left: 25%;
+				width: 60%;
+				border: none;
+				border-radius: 15px;
+				padding: 60px 20px 20px 20px;
+				margin: 0 auto;
+
+				h1 {
+					color: @bg-primary;
+					text-align: center;
+					font-weight: 400;
+					font-size: 50px;
+				}
+
+				h1 + p {
+					color: @grey;
+					text-align: center;
+					font-style: italic;
+					font-weight: 600;
+					padding-bottom: 20px;
+					border-bottom: 1px solid @grey-light;
+					margin-bottom: 20px;
+				}
+
+				.item {
+					display: flex;
+					align-items: center;
+					margin: 0 5px;
+
+					p {
+						color: @grey;
+						flex-grow: 1;
+						margin-left: 10px;
+						font-weight: 400
+					}
+
+					& + .item {
+						margin-top: 60px;
+					}
+				}
+
+				> svg {
+					display: block;
+					margin: 20px 0 0 auto;
+				}
+			}
+
+			.foot {
+				padding: 12px;
+
+				a {
+					font-size: 14px;
+					color: lighten(@grey, 30%);
+
+					&:nth-child(2) {
+						&::before, &::after {
+							content: "|";
+							padding: 0 10px;
+						}
+					}
+				}
+			}
+		}
+
+		.login {
+			position: relative;
+			z-index: 2;
+			grid-area: login;
+			background-color: @gradient[primary];
+			background-image: linear-gradient(@gradient[primary], @gradient[secondary]);
+			padding: 40px;
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+
+			> svg {
+				display: block;
+				margin: 50px auto 150px auto;
+
+				& + img {
+					display: none;
+				}
+			}
+
+			form {
+				display: grid;
+				grid-gap: 10px;
+
+				.field {display: none}
+
+				input {
+					background: @white;
+					border: none;
+					border-radius: 5px;
+					padding: 10px 15px;
+
+					&::placeholder {
+						font-size: 0.875rem;
+						font-weight: 400;
+					}
+				}
+
+				button {
+					border-radius: 5px;
+					padding: 10px 15px;
+					background-color: @bg-primary;
+					border: none;
+					color: @text-secondary;
+					font-weight: 500;
+					transition: color .15s ease-in-out,background-color .15s ease-in-out,
+					border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+					margin-bottom: 10px;
+
+					&:hover {
+						cursor: pointer;
+						background: darken(@bg-primary, 6%);
+						border-color:darken(@bg-primary, 6%);
+					}
+
+					i {
+						display: none
+					}
+				}
+
+				a {
+					color: @white;
+					font-size: 12px;
+					text-align: center;
+				}
+
+				.buttons {display: none}
+			}
+		}
+
+
+		@media screen and (max-width: 1246px) {
+			& {
+				.content {
+					.banner {
+						.rocket-astronaut {
+							position: relative;
+							left: 250px;
+
+							img {
+								width: 100%;
+								height: 1284px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: 998px) {
+			& {
+				grid-template-columns: 1fr;
+				grid-template-areas: "login"
+								 "login"
+								 "footer";
+
+				.content {
+					display: none;
+				}
+
+				.login {
+					padding: 40px;
+		
+					> svg {
+						margin: 50px auto 20px auto;
+
+						& + img {
+							display: block;
+							margin-bottom: 30px;
+						}
+					}
+		
+					form {
+						display: grid;
+						grid-gap: 10px;
+
+						> input {
+							display: none
+						}
+
+						.field {
+							display: block;
+
+							.has-icon {
+								position: relative;
+			
+								input {
+									padding-left: 2rem;
+									max-width: 100%;
+									width: 100%;
+								}
+			
+								.is-left {
+									position: absolute;
+									left: 0;
+									padding: 0.688rem;
+									font-size: 0.875rem;
+									color: @border-focus;
+								}
+							}
+						}
+
+						button {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+
+							i {
+								display: block;
+								margin-left: 10px;
+								font-size: 20px;
+							}
+						}
+
+						.buttons {
+							display: grid;
+							grid-template-columns: repeat(2, 1fr);
+
+							a {
+								display: flex;
+								flex-flow: column;
+								margin-bottom: 0px;
+
+								svg {
+									display: block;
+									margin: 0 auto 10px auto;
+								}
+							}
+						}
+
+						a {
+							color: @white;
+							font-size: 12px;
+							text-align: center;
+							margin-bottom: 30px;
+
+							i {
+								display: none
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: @breakpoints[small]) {
+			& {
+				.login {
+					svg + img {
+						width: 100%;
+					}
+
+					form {
+						width: 100%
+					}
+				}
+			}
+		}
+	}
+
 	@media screen and (max-width: @breakpoints[large]) {
-		& {
+		&:not(.login) {
 			grid-template-columns: 1fr;
 			grid-template-areas: "header"
 								 "content"
